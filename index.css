@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+}
+
+header {
+  background-color: yellow;
+  padding-bottom: 5px;
+}
+header .logo-name {
+  display: flex;
+}
+header .logo-name a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+header .logo-name a img {
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+}
+header #nav-btns {
+  display: flex;
+  justify-content: space-around;
+}
+header #nav-btns a {
+  text-align: center;
+  text-decoration: none;
+}
+
+@media screen and (min-width: 834px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #nav-btns {
+    width: 35vw;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,45 @@
+@import "./style/defaults/breakpoints";
+
+body {
+    margin: 0; 
+} 
+
+header {
+    background-color: yellow; 
+    padding-bottom: 5px; 
+
+    .logo-name { 
+        display: flex; 
+        a {
+            text-decoration: none; 
+            display: flex;
+            justify-content: center; 
+            img { 
+                background-color: transparent;  
+                width: 50px;
+                height: 50px; 
+            }
+        }
+    }    
+    #nav-btns {
+        display: flex; 
+        justify-content: space-around; 
+        a {
+            text-align: center; 
+            text-decoration: none;
+
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        #nav-btns {
+            width: 35vw;  
+        }
+    }
+    
+}
