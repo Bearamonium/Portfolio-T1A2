@@ -1,0 +1,49 @@
+@import "../defaults/breakpoints";
+@import "../defaults/colours";
+
+header {
+    background-color: $primary-colour; 
+    padding-bottom: 5px; 
+
+    .logo-name { 
+        display: flex; 
+        a {
+            text-decoration: none; 
+            display: flex;
+            justify-content: center; 
+            img { 
+                background-color: transparent;  
+                width: 57px;
+                height: 57px;  
+            }
+            p {
+                color: $primary-background; 
+                font-weight: bolder;  
+                font-size: 18px;   
+            }
+        }
+    }    
+    #nav-btns {
+        display: flex; 
+        justify-content: space-around; 
+        a {
+            text-align: center; 
+            text-decoration: none;
+            color: $primary-background; 
+            font-weight: 1000; 
+        }
+        
+    }
+}
+
+@media screen and (min-width: $medium) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        #nav-btns {
+            width: 35vw;  
+        }
+    }
+    
+}

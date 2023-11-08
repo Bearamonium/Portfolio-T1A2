@@ -1,45 +1,72 @@
 @import "./style/defaults/breakpoints";
+@import "./style/defaults/colours"; 
+@import "./style/components/header";
+@import "./style/components/footer";
 
 body {
-    margin: 0; 
-} 
+    margin: 0;
 
-header {
-    background-color: yellow; 
-    padding-bottom: 5px; 
+    .backing-color {
+        background: linear-gradient($primary-background 50%, $secondary-background 50%); 
+        min-height: 100vh;
+        margin: 0;
 
-    .logo-name { 
-        display: flex; 
-        a {
-            text-decoration: none; 
+
+    }
+
+    main {
+        .hithere {
             display: flex;
-            justify-content: center; 
-            img { 
-                background-color: transparent;  
-                width: 50px;
-                height: 50px; 
+            justify-content: space-around;
+            align-items: center;
+            margin-bottom: 18px;
+            h3 {
+                margin: 0;
+                padding-top: 20px;
+            }
+            h2 {
+                margin: 0;
+                padding-bottom: 20px;
+            }
+            .personal-pic {
+                img {
+                    width: 200px;  
+                    border-radius: 50%;
+                    margin-top: 18px;
+                }
+            } 
+        }
+        .welcome-info {
+            border: 1px solid $third-colour;
+            mix-blend-mode: soft-light; 
+            background-color: white;
+            p {
+                margin-bottom: 16px;
+                padding: 8px;
             }
         }
-    }    
-    #nav-btns {
-        display: flex; 
-        justify-content: space-around; 
-        a {
-            text-align: center; 
-            text-decoration: none;
-
-        }
+        .pic-blog-container {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 18px;
+            margin-left: 18px;
+            justify-content: center;
+            .blog-pic {
+                img {
+                width: 150px; 
+                height: 150px;
+                border-radius: 50%;
+                margin-top: 18px;
+                }
+            }       
+            .blog-quote {
+                margin-left: 18px; 
+                width: 150px;
+                height: 150px; 
+                border: 1px solid $third-colour;
+                mix-blend-mode: soft-light; 
+                background-color: white;
+            }
+        } 
     }
-}
-
-@media screen and (min-width: $medium) {
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center; 
-        #nav-btns {
-            width: 35vw;  
-        }
-    }
-    
 }

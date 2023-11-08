@@ -1,0 +1,21 @@
+@import "../defaults/breakpoints";
+@import "../defaults/colours";
+
+footer {
+    background-color: $primary-colour;
+    
+    .social-media {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        a {
+            text-decoration: none; 
+        
+            i {
+                width: 50px; 
+                font-size: 40px; 
+            }
+        }
+    }
+ 
+}

@@ -1,9 +1,5 @@
-body {
-  margin: 0;
-}
-
 header {
-  background-color: yellow;
+  background-color: #FFE1A0;
   padding-bottom: 5px;
 }
 header .logo-name {
@@ -16,8 +12,13 @@ header .logo-name a {
 }
 header .logo-name a img {
   background-color: transparent;
-  width: 50px;
-  height: 50px;
+  width: 57px;
+  height: 57px;
+}
+header .logo-name a p {
+  color: #304F6D;
+  font-weight: bolder;
+  font-size: 18px;
 }
 header #nav-btns {
   display: flex;
@@ -26,6 +27,8 @@ header #nav-btns {
 header #nav-btns a {
   text-align: center;
   text-decoration: none;
+  color: #304F6D;
+  font-weight: 1000;
 }
 
 @media screen and (min-width: 834px) {
@@ -37,4 +40,77 @@ header #nav-btns a {
   header #nav-btns {
     width: 35vw;
   }
+}
+footer {
+  background-color: #FFE1A0;
+}
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media a i {
+  width: 50px;
+  font-size: 40px;
+}
+
+body {
+  margin: 0;
+}
+body .backing-color {
+  background: linear-gradient(#304F6D 50%, #899481 50%);
+  min-height: 100vh;
+  margin: 0;
+}
+body main .hithere {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 18px;
+}
+body main .hithere h3 {
+  margin: 0;
+  padding-top: 20px;
+}
+body main .hithere h2 {
+  margin: 0;
+  padding-bottom: 20px;
+}
+body main .hithere .personal-pic img {
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+body main .welcome-info {
+  border: 1px solid #E07D54;
+  mix-blend-mode: soft-light;
+  background-color: white;
+}
+body main .welcome-info p {
+  margin-bottom: 16px;
+  padding: 8px;
+}
+body main .pic-blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 18px;
+  margin-left: 18px;
+  justify-content: center;
+}
+body main .pic-blog-container .blog-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 18px;
+}
+body main .pic-blog-container .blog-quote {
+  margin-left: 18px;
+  width: 150px;
+  height: 150px;
+  border: 1px solid #E07D54;
+  mix-blend-mode: soft-light;
+  background-color: white;
 }/*# sourceMappingURL=index.css.map */
