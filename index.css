@@ -43,6 +43,7 @@ header #nav-btns a {
 }
 footer {
   background-color: #FFE1A0;
+  width: 100vw;
 }
 footer .social-media {
   display: flex;
@@ -57,13 +58,22 @@ footer .social-media a i {
   font-size: 40px;
 }
 
+@media screen and (min-width: 834px) {
+  footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer .social-media {
+    width: 65vw;
+  }
+}
 body {
   margin: 0;
-}
-body .backing-color {
   background: linear-gradient(#304F6D 50%, #899481 50%);
   min-height: 100vh;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 body main .hithere {
   display: flex;
@@ -86,31 +96,152 @@ body main .hithere .personal-pic img {
 }
 body main .welcome-info {
   border: 1px solid #E07D54;
+  border-radius: 4%;
   mix-blend-mode: soft-light;
   background-color: white;
+}
+body main .welcome-info h3 {
+  margin-bottom: 16px;
+  padding: 8px;
+  text-align: center;
 }
 body main .welcome-info p {
   margin-bottom: 16px;
   padding: 8px;
 }
+@media screen and (min-width: 1200px) {
+  body main .welcome-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 350px;
+  }
+}
 body main .pic-blog-container {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  overflow-x: scroll;
+  height: 218px;
   margin-top: 18px;
-  margin-left: 18px;
-  justify-content: center;
+  margin-left: 8px;
 }
-body main .pic-blog-container .blog-pic img {
-  width: 150px;
-  height: 150px;
+body main .pic-blog-container h2 {
+  margin: 8px;
+}
+body main .pic-blog-container .pic-blog {
+  display: flex;
+}
+body main .pic-blog-container .pic-blog .blog-pic img {
+  width: 180px;
+  height: 200px;
   border-radius: 50%;
-  margin-top: 18px;
+  opacity: 80%;
 }
-body main .pic-blog-container .blog-quote {
+body main .pic-blog-container .pic-blog .blog-quote {
   margin-left: 18px;
-  width: 150px;
-  height: 150px;
+  margin-right: 18px;
+  margin-bottom: 18px;
+  min-width: 125px;
+  border-radius: 4%;
   border: 1px solid #E07D54;
   mix-blend-mode: soft-light;
   background-color: white;
+}
+body main .additional-info {
+  border: 1px solid #E07D54;
+  mix-blend-mode: soft-light;
+  background-color: white;
+  border-radius: 4%;
+  margin-top: 18px;
+}
+body main .additional-info p {
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+@media screen and (min-width: 834px) {
+  main .hithere h3 {
+    font-size: 38px;
+  }
+  main .hithere h2 {
+    font-size: 60px;
+  }
+  main .hithere .personal-pic img {
+    min-width: 350px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  main .medium-format {
+    display: flex;
+    align-items: center;
+  }
+  main .medium-format .hithere {
+    min-width: 65%;
+    margin-left: 18px;
+    margin-bottom: 0;
+  }
+  main .medium-format .hithere h3 {
+    font-size: 44px;
+  }
+  main .medium-format .hithere h2 {
+    font-size: 75px;
+  }
+  main .medium-format .hithere .personal-pic img {
+    width: 500px;
+    margin-right: 18px;
+  }
+  main .medium-format .welcome-info {
+    min-width: 30%;
+    margin-right: 18px;
+  }
+  main .large-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  main .large-container .pic-blog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0;
+    height: 600px;
+    max-width: 62vw;
+  }
+  main .large-container .pic-blog-container .blog-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border: 1px solid #E07D54;
+    border-radius: 20px;
+    mix-blend-mode: soft-light;
+    background-color: white;
+  }
+  main .large-container .pic-blog-container .blog-quote {
+    margin-top: 18px;
+  }
+  main .large-container .pic-blog-container .pic-blog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+  }
+  main .large-container .pic-blog-container .pic-blog .blog-pic img {
+    width: 195px;
+    height: 200px;
+    border-radius: 50%;
+    opacity: 80%;
+  }
+  main .large-container .pic-blog-container .pic-blog .blog-quote {
+    margin-left: 18px;
+    margin-right: 18px;
+    margin-bottom: 18px;
+    min-width: 120px;
+  }
+  main .large-container .additional-info {
+    margin-right: 18px;
+    max-width: 35vw;
+    min-height: 400px;
+  }
 }/*# sourceMappingURL=index.css.map */

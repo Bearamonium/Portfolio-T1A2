@@ -3,8 +3,9 @@
 
 footer {
     background-color: $primary-colour;
+    width: 100vw;
     
-    .social-media {
+    .social-media { 
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -18,4 +19,14 @@ footer {
         }
     }
  
+}
+
+@media screen and (min-width: $medium) {
+    footer {
+        display: flex;
+        justify-content: flex-end;
+        .social-media {
+            width: 65vw; 
+        }
+    }
 }
