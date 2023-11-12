@@ -1,0 +1,300 @@
+footer {
+  background-color: #FFE1A0;
+  width: 100vw;
+}
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media a i {
+  width: 50px;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer .social-media {
+    width: 65vw;
+  }
+}
+header {
+  background-color: #FFE1A0;
+  padding-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 1;
+}
+header .logo-name {
+  display: flex;
+}
+header .logo-name a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+header .logo-name a img {
+  background-color: transparent;
+  width: 57px;
+  height: 57px;
+}
+header .logo-name a p {
+  color: #304F6D;
+  font-weight: bolder;
+  font-size: 18px;
+}
+header #nav-btns {
+  display: flex;
+  justify-content: space-around;
+}
+header #nav-btns a {
+  text-align: center;
+  text-decoration: none;
+  color: #304F6D;
+  font-weight: 1000;
+}
+header #nav-btns a:hover {
+  text-decoration-line: underline;
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #nav-btns {
+    width: 50vw;
+  }
+}
+body {
+  margin: 0;
+  background: linear-gradient(#304F6D 50%, #899481 55%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+body main {
+  margin-top: 90px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+body main .personality-profile {
+  display: flex;
+  flex-direction: column;
+}
+body main .personality-profile .picture {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+body main .personality-profile .picture img {
+  width: 40vw;
+  height: 85vw;
+  border-radius: 10px;
+}
+body main .personality-profile .personality-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main .personality-profile .personality-details .infp {
+  border: 1px solid #E07D54;
+  background-color: #E6E1DD;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+body main .personality-profile .personality-details .infp h3 {
+  text-align: center;
+  margin: 8px;
+}
+body main .personality-profile .personality-details .profile-header {
+  border: 1px solid #E07D54;
+  background-color: #E6E1DD;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+body main .personality-profile .personality-details .profile-header h4 {
+  margin: 8px;
+  text-align: center;
+}
+body main .personality-profile .personality-details .personality-text {
+  border: 1px solid #E07D54;
+  background-color: #E6E1DD;
+  border-radius: 10px;
+}
+body main .personality-profile .personality-details .personality-text p {
+  text-align: justify;
+  margin: 16px;
+}
+body main .other-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .other-info .hobbies {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+}
+body main .other-info .hobbies .hobby-img {
+  display: flex;
+  justify-content: space-around;
+}
+body main .other-info .hobbies .hobby-img img {
+  border: 1px solid #E07D54;
+  background-color: #E6E1DD;
+  width: 28vw;
+  margin-left: 16px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+body main .other-info .hobbies .hobby-text {
+  border: 1px solid #E07D54;
+  background-color: #E6E1DD;
+  border-radius: 20px;
+  margin-top: 16px;
+}
+body main .other-info .hobbies .hobby-text p {
+  text-align: justify;
+  margin: 16px;
+}
+body main .other-info .experience {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+body main .other-info .experience .experience-img {
+  display: flex;
+  justify-content: space-around;
+}
+body main .other-info .experience .experience-img img {
+  border: 1px solid #E07D54;
+  background-color: #E6E1DD;
+  width: 28vw;
+  margin-right: 16px;
+  margin-left: 16px;
+  border-radius: 50%;
+}
+body main .other-info .experience .experience-text {
+  border: 1px solid #E07D54;
+  background-color: #E6E1DD;
+  border-radius: 20px;
+  margin-top: 16px;
+}
+body main .other-info .experience .experience-text h3 {
+  text-align: center;
+}
+body main .other-info .experience .experience-text p {
+  text-align: justify;
+  margin: 16px;
+}
+
+@media screen and (min-width: 600px) {
+  body main .personality-profile {
+    flex-direction: row;
+  }
+  body main .personality-profile .picture {
+    flex-direction: column;
+  }
+  body main .personality-profile .picture img {
+    width: 30vw;
+    max-width: 288px;
+    margin-right: 16px;
+    margin-top: 16px;
+    height: auto;
+  }
+  body main .personality-profile .infp h3 {
+    font-size: 1.5em;
+  }
+  body main .personality-profile .profile-header h4 {
+    font-size: 1.3em;
+  }
+  body main .other-info .hobbies {
+    flex-direction: row;
+  }
+  body main .other-info .hobbies .hobby-img {
+    flex-direction: column;
+  }
+  body main .other-info .hobbies .hobby-img img {
+    width: 15vw;
+  }
+  body main .other-info .experience {
+    flex-direction: row;
+  }
+  body main .other-info .experience .experience-img {
+    flex-direction: column;
+  }
+  body main .other-info .experience .experience-img img {
+    width: 15vw;
+  }
+}
+@media screen and (min-width: 960px) {
+  body main .other-info {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  body main .other-info .hobbies {
+    flex-direction: column;
+    align-items: center;
+    max-width: 45%;
+  }
+  body main .other-info .hobbies .hobby-img {
+    flex-direction: row;
+    max-width: 45%;
+  }
+  body main .other-info .hobbies .hobby-text {
+    width: 100%;
+  }
+  body main .other-info .experience {
+    flex-direction: column;
+    max-width: 45%;
+    align-items: center;
+  }
+  body main .other-info .experience .experience-img {
+    flex-direction: row;
+    max-width: 45%;
+  }
+  body main .other-info .experience .experience-text {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  body main .personality-profile .picture {
+    min-width: 31vw;
+    position: absolute;
+    max-height: 1000px;
+  }
+  body main .personality-profile .picture img {
+    min-width: 58%;
+    max-width: 370px;
+    max-height: 900px;
+  }
+  body main .personality-profile .personality-details {
+    max-width: 65vw;
+    position: relative;
+    left: 30vw;
+  }
+  body main .other-info {
+    max-width: 65vw;
+    position: relative;
+    left: 30vw;
+  }
+}/*# sourceMappingURL=about.css.map */

@@ -1,0 +1,250 @@
+@import "../components/footer";
+@import "../components/header";
+@import "../defaults/breakpoints";
+@import "../defaults/colours"; 
+
+body {
+    margin: 0;  
+    background: linear-gradient($primary-background 50%, $secondary-background 55%); 
+    min-height: 100vh;
+    display: flex;  
+    flex-direction: column;
+    justify-content: space-between; 
+
+    main {
+        margin-top: 90px;
+        margin-left: 16px;
+        margin-right: 16px; 
+        .personality-profile { 
+            display: flex;
+            flex-direction: column;
+            .picture {
+                display: flex; 
+                align-items: center; 
+                justify-content: space-around; 
+                img {
+                    width: 40vw;    
+                    height: 85vw;               
+                    border-radius: 10px;      
+                }
+            }
+            .personality-details {
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                justify-content: center;
+                .infp {
+                    border: 1px solid $third-colour;
+                    background-color: $fourth-colour;
+                    border-radius: 10px;  
+                    width: 100%; 
+                    margin-top: 16px;
+                    margin-bottom: 8px;
+                    h3 {
+                        text-align: center; 
+                        margin: 8px;  
+                    }
+                }
+                .profile-header {
+                    border: 1px solid $third-colour;
+                    background-color: $fourth-colour;
+                    border-radius: 10px;  
+                    width: 100%;
+                    margin-top: 8px;
+                    margin-bottom: 8px; 
+                    h4 {
+                        margin: 8px; 
+                        text-align: center; 
+                    }
+                } 
+                .personality-text {
+                    border: 1px solid $third-colour;
+                    background-color: $fourth-colour;
+                    border-radius: 10px;
+                    p {
+                        text-align: justify;   
+                        margin: 16px; 
+                    }
+                }
+            }
+        }
+        .other-info {
+            display: flex; 
+            flex-wrap: wrap; 
+            .hobbies {
+                display: flex;
+                flex-direction: column; 
+                margin-top: 16px; 
+                .hobby-img {
+                    display: flex;
+                    justify-content: space-around; 
+                    img {
+                        border: 1px solid $third-colour;
+                        background-color: $fourth-colour;
+                        width: 28vw;          
+                        margin-left: 16px; 
+                        margin-right: 16px;
+                        border-radius: 50%;
+                    } 
+                }
+                .hobby-text {
+                    border: 1px solid $third-colour;
+                    background-color: $fourth-colour; 
+                    border-radius: 20px;
+                    margin-top: 16px;  
+                    p {
+                        text-align: justify;  
+                        margin: 16px; 
+                    } 
+                }
+            }
+            .experience {
+                display: flex; 
+                flex-direction: column;
+                margin-top: 16px; 
+                margin-bottom: 16px;
+                .experience-img { 
+                    display: flex;
+                    justify-content: space-around; 
+                    img {
+                        border: 1px solid $third-colour; 
+                        background-color: $fourth-colour; 
+                        width: 28vw;
+                        margin-right: 16px;
+                        margin-left: 16px;  
+                        border-radius: 50%; 
+                    }  
+                }
+                .experience-text {
+                    border: 1px solid $third-colour;
+                    background-color: $fourth-colour;
+                    border-radius: 20px; 
+                    margin-top: 16px;  
+                    h3 {
+                        text-align: center; 
+                    }  
+                    p {
+                        text-align: justify;  
+                        margin: 16px;  
+                    } 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $medium) {
+    body {
+        main {
+            .personality-profile {
+                flex-direction: row;
+                .picture {
+                    flex-direction: column;
+                    img {
+                        width: 30vw;  
+                        max-width: 288px;
+                        margin-right: 16px; 
+                        margin-top: 16px;
+                        height: auto; 
+                    }
+                }
+                .infp {
+                    h3 {
+                        font-size: 1.5em;
+                    }
+                }
+                .profile-header {
+                    h4 {
+                        font-size: 1.3em;  
+                    }
+                }
+            }
+            .other-info {
+                .hobbies {
+                    flex-direction: row;
+                    .hobby-img {
+                        flex-direction: column; 
+                        img {
+                            width: 15vw;  
+                        }
+                    }
+                }
+                .experience {
+                    flex-direction: row; 
+                    .experience-img {
+                        flex-direction: column;
+                        img {
+                            width: 15vw; 
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $large) { 
+    body { 
+        main {
+            .other-info {
+                flex-direction: row;
+                justify-content: space-around; 
+                .hobbies {
+                    flex-direction: column;
+                    align-items: center; 
+                    max-width: 45%; 
+                    .hobby-img {
+                        flex-direction: row; 
+                        max-width: 45%; 
+                    }
+                    .hobby-text {
+                        width: 100%;
+                    }
+                }
+                .experience {
+                    flex-direction: column;
+                    max-width: 45%;
+                    align-items: center;
+                    .experience-img {
+                        flex-direction: row; 
+                        max-width: 45%; 
+                    }
+                    .experience-text {
+                        max-width: 100%; 
+                    }
+                }
+            }
+        }
+    }
+} 
+
+@media screen and (min-width:$x-large) {
+    body {
+        main {
+            display: flex; 
+            flex-wrap: wrap;  
+            .personality-profile { 
+                .picture { 
+                    min-width: 31vw;  
+                    position: absolute; 
+                    max-height: 1000px;
+                    img {
+                        min-width: 58%;  
+                        max-width: 370px;
+                        max-height: 900px; 
+                    }
+                }
+                .personality-details {
+                    max-width: 65vw; 
+                    position: relative;  
+                    left: 30vw;  
+                }
+            }
+            .other-info {
+                max-width: 65vw;
+                position: relative; 
+                left: 30vw;   
+            }
+        }
+    }
+}

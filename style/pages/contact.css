@@ -1,0 +1,151 @@
+footer {
+  background-color: #FFE1A0;
+  width: 100vw;
+}
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media a i {
+  width: 50px;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer .social-media {
+    width: 65vw;
+  }
+}
+header {
+  background-color: #FFE1A0;
+  padding-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 1;
+}
+header .logo-name {
+  display: flex;
+}
+header .logo-name a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+header .logo-name a img {
+  background-color: transparent;
+  width: 57px;
+  height: 57px;
+}
+header .logo-name a p {
+  color: #304F6D;
+  font-weight: bolder;
+  font-size: 18px;
+}
+header #nav-btns {
+  display: flex;
+  justify-content: space-around;
+}
+header #nav-btns a {
+  text-align: center;
+  text-decoration: none;
+  color: #304F6D;
+  font-weight: 1000;
+}
+header #nav-btns a:hover {
+  text-decoration-line: underline;
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #nav-btns {
+    width: 50vw;
+  }
+}
+body {
+  margin: 0;
+  background: linear-gradient(#304F6D 50%, #899481 55%);
+  min-height: 100vh;
+}
+body main {
+  margin-top: 90px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+body main h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  border: 1px solid #E07D54;
+  border-radius: 10px;
+  background-color: rgba(225, 225, 225, 0.6);
+}
+body main form .form-elements {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+body main form .form-elements .form-input {
+  border: 2px solid #FFE1A0;
+  border-radius: 10px;
+  outline: none;
+  padding-left: 10px;
+  font-size: 1.1rem;
+}
+body main form .form-elements .form-input#form-textarea {
+  resize: none;
+}
+body main form .form-elements .form-input:not(#form-textarea) {
+  height: 26px;
+}
+body main form .btn-div {
+  text-align: center;
+}
+body main form .btn-div #submit {
+  height: 40px;
+  background-color: #FFE1A0;
+  border: none;
+  color: #304F6D;
+  font-weight: bolder;
+  min-width: 80px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+body main .contact-details {
+  text-align: center;
+  border: 1px solid #E07D54;
+  border-radius: 10px;
+  background-color: rgba(225, 225, 225, 0.6);
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+body main .contact-details span {
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 960px) {
+  body main .contact-container {
+    display: flex;
+    margin-bottom: 16px;
+    justify-content: space-around;
+    align-items: center;
+  }
+  body main .contact-container .form-elements {
+    width: 50vw;
+    margin-right: 16px;
+  }
+  body main .contact-details {
+    width: 35vw;
+  }
+}/*# sourceMappingURL=contact.css.map */

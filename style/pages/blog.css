@@ -1,0 +1,126 @@
+footer {
+  background-color: #FFE1A0;
+  width: 100vw;
+}
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media a i {
+  width: 50px;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  footer {
+    display: flex;
+    justify-content: flex-end;
+  }
+  footer .social-media {
+    width: 65vw;
+  }
+}
+header {
+  background-color: #FFE1A0;
+  padding-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 1;
+}
+header .logo-name {
+  display: flex;
+}
+header .logo-name a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+header .logo-name a img {
+  background-color: transparent;
+  width: 57px;
+  height: 57px;
+}
+header .logo-name a p {
+  color: #304F6D;
+  font-weight: bolder;
+  font-size: 18px;
+}
+header #nav-btns {
+  display: flex;
+  justify-content: space-around;
+}
+header #nav-btns a {
+  text-align: center;
+  text-decoration: none;
+  color: #304F6D;
+  font-weight: 1000;
+}
+header #nav-btns a:hover {
+  text-decoration-line: underline;
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #nav-btns {
+    width: 50vw;
+  }
+}
+body {
+  margin: 0;
+  background: linear-gradient(#304F6D 50%, #899481 55%);
+  min-height: 100vh;
+}
+body main {
+  margin-top: 90px;
+  margin-left: 16px;
+  margin-right: 16px;
+}
+body main .blog-header {
+  border: 1px solid #E07D54;
+  border-radius: 4%;
+  background-color: rgba(225, 225, 225, 0.6);
+  margin-bottom: 16px;
+}
+body main .blog-header h2 {
+  text-align: center;
+}
+body main .blog-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body main .blog-cards article {
+  border: 1px solid #E07D54;
+  border-radius: 4%;
+  background-color: rgba(225, 225, 225, 0.6);
+  margin-bottom: 16px;
+}
+body main .blog-cards article h3 {
+  text-align: center;
+  margin: 16px;
+  border-bottom: 2px solid #FFE1A0;
+}
+body main .blog-cards article img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50vw;
+}
+body main .blog-cards article p {
+  text-align: justify;
+  margin: 16px;
+}
+body main .blog-cards article .date {
+  text-align: center;
+  border-bottom: 2px solid #FFE1A0;
+  border-top: 2px solid #FFE1A0;
+}/*# sourceMappingURL=blog.css.map */

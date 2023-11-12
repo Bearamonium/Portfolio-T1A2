@@ -3,7 +3,11 @@
 
 header {
     background-color: $primary-colour; 
-    padding-bottom: 5px; 
+    padding-bottom: 0px;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    z-index: 1; 
 
     .logo-name { 
         display: flex; 
@@ -11,39 +15,41 @@ header {
             text-decoration: none; 
             display: flex;
             justify-content: center; 
-            img { 
+            img {
                 background-color: transparent;  
                 width: 57px;
-                height: 57px;  
+                height: 57px; 
             }
             p {
                 color: $primary-background; 
                 font-weight: bolder;  
-                font-size: 18px;   
+                font-size: 18px;
             }
         }
     }    
     #nav-btns {
         display: flex; 
-        justify-content: space-around; 
+        justify-content: space-around;
         a {
             text-align: center; 
             text-decoration: none;
             color: $primary-background; 
             font-weight: 1000; 
         }
-        
+        a:hover {
+            text-decoration-line: underline;
+        }
     }
 }
 
-@media screen and (min-width: $medium) {
+@media screen and (min-width: $large) {
     header {
         display: flex;
         justify-content: space-between;
         align-items: center; 
         #nav-btns {
-            width: 35vw;  
+            width: 50vw; 
         }
     }
     
-}
+} 
