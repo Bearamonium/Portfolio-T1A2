@@ -2,21 +2,18 @@
 @import "../components/header";
 @import "../defaults/breakpoints";
 @import "../defaults/colours"; 
+@import "../defaults/common-style";
 
 body {
-    margin: 0; 
-    background: linear-gradient($primary-background 50%, $secondary-background 55%); 
-    min-height: 100vh;
+    @include body-style;
         main {
-            margin-top: 90px;
-            margin-left: 16px;
-            margin-right: 16px;
+            @include main-margin;
+            @include common-font; 
             h3 {
                 text-align: center;
                 font-size: 1.5rem;  
-                border: 1px solid $third-colour;
-                border-radius: 10px;   
-                background-color: rgb(225, 225, 225, .6);  
+                @include card-style;
+                @include title-backing;
             }
             form {
                 .form-elements {
@@ -46,7 +43,7 @@ body {
                     #submit {
                         height: 40px; 
                         background-color: $primary-colour;
-                        border: none;
+                        border: 2px solid $third-colour; 
                         color: $primary-background;
                         font-weight: bolder;
                         min-width: 80px; 
@@ -58,9 +55,7 @@ body {
             
             .contact-details {
                 text-align: center;
-                border: 1px solid $third-colour;
-                border-radius: 10px;   
-                background-color: rgb(225, 225, 225, .6);  
+                @include card-style; 
                 margin-bottom: 16px; 
                 margin-top: 16px;  
 

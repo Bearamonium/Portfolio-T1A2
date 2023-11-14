@@ -1,7 +1,9 @@
 @import "../defaults/breakpoints";
 @import "../defaults/colours";
+@import "../defaults/common-style";
 
 footer {
+    @include common-font;
     background-color: $primary-colour;
     width: 100vw;
     

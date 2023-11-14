@@ -1,0 +1,37 @@
+@import "../defaults/colours";
+@import url('https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap');
+
+@mixin body-style {
+    margin: 0;  
+    background: linear-gradient($primary-background 40%, $secondary-background 70%); 
+    min-height: 100vh; 
+}
+
+@mixin main-margin {
+    margin-top: 90px;
+    margin-left: 16px;
+    margin-right: 16px; 
+}
+
+@mixin card-style {
+    border: 2px solid $third-colour;  
+    border-radius: 10px;   
+    background-color: rgb(225, 225, 225, .6); 
+}
+
+@mixin title-backing {
+    border-top: 1px solid $third-colour;
+    border-bottom: 1px solid $third-colour; 
+    background-color: $primary-colour;
+    color: $primary-background; 
+    padding: 2px; 
+}
+
+@mixin img-border {
+    border: 2px solid $third-colour; 
+    background-color: $fourth-colour;
+}
+
+@mixin common-font {
+    font-family: 'Merriweather', sans-serif;  
+}

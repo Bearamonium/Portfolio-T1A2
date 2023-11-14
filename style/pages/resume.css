@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
 footer {
+  font-family: "Merriweather", sans-serif;
   background-color: #FFE1A0;
   width: 100vw;
 }
@@ -24,7 +28,9 @@ footer .social-media a i {
     width: 65vw;
   }
 }
+@keyframes button-hover {}
 header {
+  font-family: "Merriweather", sans-serif;
   background-color: #FFE1A0;
   padding-bottom: 0px;
   position: fixed;
@@ -62,6 +68,9 @@ header #nav-btns a {
 }
 header #nav-btns a:hover {
   text-decoration-line: underline;
+  color: white;
+  transition: font-size 0.5s;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 960px) {
@@ -76,4 +85,74 @@ header #nav-btns a:hover {
 }
 body {
   margin: 0;
+  background: linear-gradient(#304F6D 40%, #899481 70%);
+  min-height: 100vh;
+}
+body main {
+  margin-top: 90px;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-family: "Merriweather", sans-serif;
+}
+body main img {
+  border: 2px solid #E07D54;
+  background-color: #E6E1DD;
+}
+body main .work-experience, body main .academic-achievements, body main .resume-link {
+  border: 2px solid #E07D54;
+  border-radius: 10px;
+  background-color: rgba(225, 225, 225, 0.6);
+  text-align: center;
+  margin-bottom: 16px;
+}
+body main .work-experience h2, body main .academic-achievements h2, body main .resume-link h2 {
+  border-top: 1px solid #E07D54;
+  border-bottom: 1px solid #E07D54;
+  background-color: #FFE1A0;
+  color: #304F6D;
+  padding: 2px;
+}
+body main .work-experience h4, body main .academic-achievements h4, body main .resume-link h4 {
+  font-size: 1.2rem;
+}
+body main .work-experience p, body main .academic-achievements p, body main .resume-link p {
+  font-size: 1.1rem;
+}
+body main .resume-link button {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  border: solid 2px #FFE1A0;
+  background-color: #E07D54;
+}
+
+@media screen and (min-width: 960px) {
+  body main .resume-info {
+    display: flex;
+    justify-content: space-around;
+  }
+  body main .resume-info .work-experience, body main .resume-info .academic-achievements {
+    min-width: 28%;
+  }
+  body main img {
+    border-radius: 50%;
+    margin-bottom: 16px;
+    width: 25%;
+    height: 200px;
+  }
+  body main .resume-link button {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 959px) {
+  body main img {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body main img {
+    width: 30%;
+    height: 50%;
+  }
 }/*# sourceMappingURL=resume.css.map */

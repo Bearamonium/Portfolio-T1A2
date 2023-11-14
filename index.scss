@@ -2,15 +2,14 @@
 @import "./style/defaults/colours"; 
 @import "./style/components/header";
 @import "./style/components/footer";
+@import "./style/defaults/common-style"; 
 
 body {
-    margin: 0px;
-    background: linear-gradient($primary-background 50%, $secondary-background 55%);  
+    @include body-style;  
 
     main {
-        margin-top: 90px;
-        margin-left: 16px;
-        margin-right: 16px; 
+        @include main-margin;
+        @include common-font; 
 
         .greeting {
             display: flex;
@@ -19,36 +18,42 @@ body {
             img {
                 width: 75vw;  
                 border-radius: 50%;  
+                @include img-border;
             }
-            h3, h2 { 
+            h3, h1 {  
                 text-align: center;
                 margin: 8px; 
             }
             h3 {
                 font-size: 1.5em; 
             }
-            h2 {
+            h1 {
                 font-size: 35px;  
+                span {
+                    color: $primary-colour; 
+                }
             }
         }
 
         .welcome-info, .additional-info { 
-            border: 1px solid $third-colour;
-            border-radius: 4%; 
-            background-color: rgb(225, 225, 225, .4);  
+            @include card-style;  
             img {
                 display: block;
                     margin-left: auto; 
                     margin-right: auto;
-                    width: 50%;   
+                    width: 50%;    
             }
-            h3, p {
-                margin: 8px; 
+            h2, p {
+                margin: 24px;   
+            }
+            h2 {
+                @include title-backing;
+                text-align: center; 
             }
             p {
                 text-align: justify; 
             }
-        }
+        } 
 
         .pic-blog-container {
             display: flex;
@@ -59,11 +64,10 @@ body {
             margin-bottom: 16px; 
             width: 100vw; 
             .blog-header {
-                border: 1px solid $third-colour;
-                border-radius: 4%; 
-                background-color: rgb(225, 225, 225, .4);
+                @include card-style; 
                 h2 {
                     margin: 8px; 
+                    @include title-backing;
                 }
             }
             .pic-blog {
@@ -73,26 +77,35 @@ body {
                 .blog-pic {
                     img {
                         width: 35vw;   
-                        border-radius: 35%;     
+                        border-radius: 35%;    
+                        @include img-border; 
                     }
                 }
-                .blog-quote {
-                    border: 1px solid $third-colour;
-                    border-radius: 4%; 
-                    background-color: rgb(225, 225, 225, .4); 
-                    max-height: 30vh; 
-                    min-width: 30vw;  
-                    p {
-                            margin: 8px; 
-                            text-align: center; 
+                a {
+                    text-decoration: none; 
+                    .blog-quote {
+                        @include card-style; 
+                        max-height: 30vh; 
+                        min-width: 30vw; 
+                        p {
+                                margin: 24px;   
+                                text-align: center; 
+                        }
                     }
+                }
+                a:hover {
+                    .blog-quote {
+                        box-shadow: 0px -1px 11px 5px rgba(0,0,0,0.75);  
+                        transform: scale(1.05);
+                        transition: transform 1s;  
+                    }  
                 }
             }
         }
 
         .additional-info {
             margin-bottom: 16px; 
-            h3, h4, p {
+            h2, h4, p {
                 text-align: center;
             }
         }
@@ -112,9 +125,9 @@ body {
                 h3 { 
                     font-size: 2rem; 
                 }
-                h2 {
+                h1 {
                     font-size: 45px;  
-                }
+                } 
             } 
             .greeting :nth-child(1) {
                 order: 2;
@@ -123,12 +136,15 @@ body {
                 order: 1; 
             }
             .welcome-info {
-                h3, p {
+                p {
                     font-size: 1.2rem; 
+                }
+                img {
+                    width: 30%;
                 }
             }
             .additional-info {
-                h3, h4, p {
+                h4, p { 
                     font-size: 1.2rem;
                 }
             }
@@ -142,7 +158,10 @@ body {
             .large-container {
                 display: flex;
                 .greeting {
+                    flex-direction: column; 
+                    justify-content: flex-start; 
                     img {
+                        margin-top: 40px; 
                         width: 35vw; 
                         margin-right: 16px;
                     }
@@ -190,6 +209,17 @@ body {
 @media screen and (min-width: $x-large) {
     body {
         main {
+            .large-container {
+                .greeting {
+                    justify-content: space-around; 
+                    margin-top: 24px; 
+                    .hello-text {
+                        h1 {
+                            font-size: 4em;  
+                        }
+                    }
+                }
+            }
             .large-container2 {
                 .pic-blog-container { 
                     flex-wrap: wrap;

@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
 footer {
+  font-family: "Merriweather", sans-serif;
   background-color: #FFE1A0;
   width: 100vw;
 }
@@ -24,7 +28,9 @@ footer .social-media a i {
     width: 65vw;
   }
 }
+@keyframes button-hover {}
 header {
+  font-family: "Merriweather", sans-serif;
   background-color: #FFE1A0;
   padding-bottom: 0px;
   position: fixed;
@@ -62,6 +68,9 @@ header #nav-btns a {
 }
 header #nav-btns a:hover {
   text-decoration-line: underline;
+  color: white;
+  transition: font-size 0.5s;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 960px) {
@@ -76,22 +85,28 @@ header #nav-btns a:hover {
 }
 body {
   margin: 0;
-  background: linear-gradient(#304F6D 50%, #899481 55%);
+  background: linear-gradient(#304F6D 40%, #899481 70%);
   min-height: 100vh;
 }
 body main {
   margin-top: 90px;
   margin-left: 16px;
   margin-right: 16px;
+  font-family: "Merriweather", sans-serif;
 }
 body main .blog-header {
-  border: 1px solid #E07D54;
-  border-radius: 4%;
+  border: 2px solid #E07D54;
+  border-radius: 10px;
   background-color: rgba(225, 225, 225, 0.6);
   margin-bottom: 16px;
 }
 body main .blog-header h2 {
   text-align: center;
+  border-top: 1px solid #E07D54;
+  border-bottom: 1px solid #E07D54;
+  background-color: #FFE1A0;
+  color: #304F6D;
+  padding: 2px;
 }
 body main .blog-cards {
   display: flex;
@@ -99,15 +114,19 @@ body main .blog-cards {
   align-items: center;
 }
 body main .blog-cards article {
-  border: 1px solid #E07D54;
-  border-radius: 4%;
+  border: 2px solid #E07D54;
+  border-radius: 10px;
   background-color: rgba(225, 225, 225, 0.6);
   margin-bottom: 16px;
 }
 body main .blog-cards article h3 {
   text-align: center;
-  margin: 16px;
-  border-bottom: 2px solid #FFE1A0;
+  margin: 24px;
+  border-top: 1px solid #E07D54;
+  border-bottom: 1px solid #E07D54;
+  background-color: #FFE1A0;
+  color: #304F6D;
+  padding: 2px;
 }
 body main .blog-cards article img {
   display: block;
@@ -117,10 +136,12 @@ body main .blog-cards article img {
 }
 body main .blog-cards article p {
   text-align: justify;
-  margin: 16px;
+  margin: 24px;
 }
 body main .blog-cards article .date {
   text-align: center;
   border-bottom: 2px solid #FFE1A0;
   border-top: 2px solid #FFE1A0;
+  font-weight: 700;
+  padding: 2px;
 }/*# sourceMappingURL=blog.css.map */

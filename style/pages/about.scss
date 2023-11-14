@@ -2,19 +2,16 @@
 @import "../components/header";
 @import "../defaults/breakpoints";
 @import "../defaults/colours"; 
+@import "../defaults/common-style";
 
 body {
-    margin: 0;  
-    background: linear-gradient($primary-background 50%, $secondary-background 55%); 
-    min-height: 100vh;
+    @include body-style;
     display: flex;  
     flex-direction: column;
     justify-content: space-between; 
 
     main {
-        margin-top: 90px;
-        margin-left: 16px;
-        margin-right: 16px; 
+        @include main-margin;  
         .personality-profile { 
             display: flex;
             flex-direction: column;
@@ -23,6 +20,7 @@ body {
                 align-items: center; 
                 justify-content: space-around; 
                 img {
+                    @include img-border; 
                     width: 40vw;    
                     height: 85vw;               
                     border-radius: 10px;      
@@ -34,36 +32,36 @@ body {
                 align-items: center; 
                 justify-content: center;
                 .infp {
-                    border: 1px solid $third-colour;
-                    background-color: $fourth-colour;
-                    border-radius: 10px;  
+                    @include card-style;  
                     width: 100%; 
                     margin-top: 16px;
                     margin-bottom: 8px;
                     h3 {
                         text-align: center; 
                         margin: 8px;  
+                        @include common-font; 
+                        @include title-backing; 
                     }
                 }
                 .profile-header {
-                    border: 1px solid $third-colour;
-                    background-color: $fourth-colour;
-                    border-radius: 10px;  
+                    @include card-style; 
                     width: 100%;
                     margin-top: 8px;
                     margin-bottom: 8px; 
                     h4 {
                         margin: 8px; 
                         text-align: center; 
+                        @include common-font;  
+                        @include title-backing; 
                     }
                 } 
                 .personality-text {
-                    border: 1px solid $third-colour;
-                    background-color: $fourth-colour;
-                    border-radius: 10px;
+                    @include card-style; 
                     p {
                         text-align: justify;   
-                        margin: 16px; 
+                        margin: 24px; 
+                        @include common-font;
+                        font-weight: 550;
                     }
                 }
             }
@@ -79,8 +77,7 @@ body {
                     display: flex;
                     justify-content: space-around; 
                     img {
-                        border: 1px solid $third-colour;
-                        background-color: $fourth-colour;
+                        @include img-border; 
                         width: 28vw;          
                         margin-left: 16px; 
                         margin-right: 16px;
@@ -88,13 +85,18 @@ body {
                     } 
                 }
                 .hobby-text {
-                    border: 1px solid $third-colour;
-                    background-color: $fourth-colour; 
-                    border-radius: 20px;
+                    @include card-style; 
                     margin-top: 16px;  
+                    margin-bottom: 16px;
+                    h3 {
+                        text-align: center; 
+                        @include title-backing; 
+                        @include common-font; 
+                    }
                     p {
                         text-align: justify;  
-                        margin: 16px; 
+                        margin: 24px;  
+                        @include common-font; 
                     } 
                 }
             }
@@ -107,25 +109,25 @@ body {
                     display: flex;
                     justify-content: space-around; 
                     img {
-                        border: 1px solid $third-colour; 
-                        background-color: $fourth-colour; 
+                        @include img-border;
                         width: 28vw;
                         margin-right: 16px;
-                        margin-left: 16px;  
+                        margin-left: 16px;   
                         border-radius: 50%; 
                     }  
                 }
                 .experience-text {
-                    border: 1px solid $third-colour;
-                    background-color: $fourth-colour;
-                    border-radius: 20px; 
+                    @include card-style;  
                     margin-top: 16px;  
                     h3 {
                         text-align: center; 
+                        @include title-backing; 
+                        @include common-font; 
                     }  
                     p {
                         text-align: justify;  
-                        margin: 16px;  
+                        margin: 24px;  
+                        @include common-font; 
                     } 
                 }
             }

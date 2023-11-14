@@ -1,4 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
 footer {
+  font-family: "Merriweather", sans-serif;
   background-color: #FFE1A0;
   width: 100vw;
 }
@@ -24,7 +28,9 @@ footer .social-media a i {
     width: 65vw;
   }
 }
+@keyframes button-hover {}
 header {
+  font-family: "Merriweather", sans-serif;
   background-color: #FFE1A0;
   padding-bottom: 0px;
   position: fixed;
@@ -62,6 +68,9 @@ header #nav-btns a {
 }
 header #nav-btns a:hover {
   text-decoration-line: underline;
+  color: white;
+  transition: font-size 0.5s;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 960px) {
@@ -76,20 +85,26 @@ header #nav-btns a:hover {
 }
 body {
   margin: 0;
-  background: linear-gradient(#304F6D 50%, #899481 55%);
+  background: linear-gradient(#304F6D 40%, #899481 70%);
   min-height: 100vh;
 }
 body main {
   margin-top: 90px;
   margin-left: 16px;
   margin-right: 16px;
+  font-family: "Merriweather", sans-serif;
 }
 body main h3 {
   text-align: center;
   font-size: 1.5rem;
-  border: 1px solid #E07D54;
+  border: 2px solid #E07D54;
   border-radius: 10px;
   background-color: rgba(225, 225, 225, 0.6);
+  border-top: 1px solid #E07D54;
+  border-bottom: 1px solid #E07D54;
+  background-color: #FFE1A0;
+  color: #304F6D;
+  padding: 2px;
 }
 body main form .form-elements {
   display: flex;
@@ -115,7 +130,7 @@ body main form .btn-div {
 body main form .btn-div #submit {
   height: 40px;
   background-color: #FFE1A0;
-  border: none;
+  border: 2px solid #E07D54;
   color: #304F6D;
   font-weight: bolder;
   min-width: 80px;
@@ -124,7 +139,7 @@ body main form .btn-div #submit {
 }
 body main .contact-details {
   text-align: center;
-  border: 1px solid #E07D54;
+  border: 2px solid #E07D54;
   border-radius: 10px;
   background-color: rgba(225, 225, 225, 0.6);
   margin-bottom: 16px;

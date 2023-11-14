@@ -1,7 +1,13 @@
 @import "../defaults/breakpoints";
 @import "../defaults/colours";
+@import "../defaults/common-style";
+
+@keyframes button-hover {
+
+}
 
 header {
+    @include common-font; 
     background-color: $primary-colour; 
     padding-bottom: 0px;
     position: fixed;
@@ -38,6 +44,9 @@ header {
         }
         a:hover {
             text-decoration-line: underline;
+            color: white;
+            transition: font-size .5s;    
+            font-size: 1.2rem;  
         }
     }
 }

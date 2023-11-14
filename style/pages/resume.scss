@@ -2,7 +2,91 @@
 @import "../components/header";
 @import "../defaults/breakpoints";
 @import "../defaults/colours"; 
+@import "../defaults/common-style";
 
 body {
-    margin: 0; 
+    @include body-style;
+    
+    main {
+        @include main-margin;
+        @include common-font; 
+
+        img {
+            @include img-border; 
+        } 
+        .work-experience, .academic-achievements, .resume-link { 
+            @include card-style;
+            text-align: center; 
+            margin-bottom: 16px; 
+            h2 {
+                @include title-backing;
+            }
+            h4 {
+                font-size: 1.2rem;
+            }
+            p {
+                font-size: 1.1rem; 
+            }
+        }
+
+        .resume-link {
+            button {
+                margin-bottom: 16px; 
+                font-size: 18px; 
+                font-weight: 600; 
+                border-radius: 10px; 
+                border: solid 2px $primary-colour;
+                background-color: $third-colour;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $large) {
+    body {
+        main {
+            .resume-info {
+                display: flex; 
+                justify-content: space-around;
+                .work-experience, .academic-achievements {
+                    min-width: 28%;   
+                } 
+            }
+
+            img {
+                border-radius: 50%; 
+                margin-bottom: 16px; 
+                width: 25%; 
+                height: 200px;   
+            }
+
+            .resume-link {
+                button {
+                    margin-bottom: 16px; 
+
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 959px) {
+    body {
+        main {
+            img {
+                display: none; 
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $x-large) {
+    body {
+        main {
+            img {
+                width: 30%; 
+                height: 50% 
+            }
+        }
+    }
 }
