@@ -6,7 +6,7 @@
 
 [Presentation](https://youtu.be/aJAhkKjDPiY)
 
-Website
+[Website](https://philip-mills-portfolio.netlify.app/)
 
 ## Purpose
 
@@ -72,5 +72,6 @@ This page was designed for potential employers with IT knowledge. These employer
 * Wireframes: [Figma](https://www.figma.com/)
 * Website Code: HTML & SCSS compiled into CSS
 * Creation Platform: Visual Studio Code
+* Website Deployment: [Netlify](https://www.netlify.com/)
 * Version Control: [GitHub](https://github.com/)
 * Slide Deck: Microsoft Powerpoint
