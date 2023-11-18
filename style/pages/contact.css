@@ -1,10 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
 footer {
-  font-family: "Merriweather", sans-serif;
+  font-family: "PT Serif", sans-serif;
   background-color: #FFE1A0;
   width: 100vw;
+  position: relative;
 }
 footer .social-media {
   display: flex;
@@ -28,9 +45,25 @@ footer .social-media a i {
     width: 65vw;
   }
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
 @keyframes button-hover {}
 header {
-  font-family: "Merriweather", sans-serif;
+  font-family: "PT Serif", sans-serif;
   background-color: #FFE1A0;
   padding-bottom: 0px;
   position: fixed;
@@ -83,51 +116,72 @@ header #nav-btns a:hover {
     width: 50vw;
   }
 }
-body {
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+html {
+  height: 100%;
+}
+html body {
   margin: 0;
   background: linear-gradient(#304F6D 40%, #899481 70%);
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
-body main {
-  margin-top: 90px;
+html body main {
   margin-left: 16px;
   margin-right: 16px;
-  font-family: "Merriweather", sans-serif;
+  font-family: "PT Serif", sans-serif;
+  margin-top: 90px;
+  position: relative;
 }
-body main h3 {
+html body main h3 {
+  margin: 0;
   text-align: center;
   font-size: 1.5rem;
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
-  border-top: 1px solid #E07D54;
-  border-bottom: 1px solid #E07D54;
-  background-color: #FFE1A0;
-  color: #304F6D;
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
   padding: 2px;
+  color: #FFE1A0;
+  font-family: "Kalam", cursive;
 }
-body main form .form-elements {
+html body main form .form-elements {
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
 }
-body main form .form-elements .form-input {
+html body main form .form-elements .form-input {
   border: 2px solid #FFE1A0;
   border-radius: 10px;
   outline: none;
   padding-left: 10px;
   font-size: 1.1rem;
 }
-body main form .form-elements .form-input#form-textarea {
+html body main form .form-elements .form-input#form-textarea {
   resize: none;
 }
-body main form .form-elements .form-input:not(#form-textarea) {
+html body main form .form-elements .form-input:not(#form-textarea) {
   height: 26px;
 }
-body main form .btn-div {
+html body main form .btn-div {
   text-align: center;
 }
-body main form .btn-div #submit {
+html body main form .btn-div #submit {
   height: 40px;
   background-color: #FFE1A0;
   border: 2px solid #E07D54;
@@ -137,7 +191,7 @@ body main form .btn-div #submit {
   font-size: 1.1rem;
   border-radius: 10px;
 }
-body main .contact-details {
+html body main .contact-details {
   text-align: center;
   border: 2px solid #E07D54;
   border-radius: 10px;
@@ -145,22 +199,33 @@ body main .contact-details {
   margin-bottom: 16px;
   margin-top: 16px;
 }
-body main .contact-details span {
+html body main .contact-details span {
   font-weight: bolder;
 }
-
+html body footer {
+  position: absolute;
+  bottom: 0;
+}
 @media screen and (min-width: 960px) {
-  body main .contact-container {
+  html body main h3 {
+    font-size: 2rem;
+  }
+  html body main .contact-container {
     display: flex;
     margin-bottom: 16px;
     justify-content: space-around;
     align-items: center;
   }
-  body main .contact-container .form-elements {
+  html body main .contact-container .form-elements {
     width: 50vw;
     margin-right: 16px;
   }
-  body main .contact-details {
+  html body main .contact-details {
     width: 35vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  html body main h3 {
+    font-size: 2.5rem;
   }
 }/*# sourceMappingURL=contact.css.map */

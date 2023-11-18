@@ -6,6 +6,7 @@ footer {
     @include common-font;
     background-color: $primary-colour;
     width: 100vw;
+    position: relative; 
     
     .social-media { 
         display: flex;

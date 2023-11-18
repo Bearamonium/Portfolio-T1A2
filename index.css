@@ -1,9 +1,25 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
 @keyframes button-hover {}
 header {
-  font-family: "Merriweather", sans-serif;
+  font-family: "PT Serif", sans-serif;
   background-color: #FFE1A0;
   padding-bottom: 0px;
   position: fixed;
@@ -56,10 +72,27 @@ header #nav-btns a:hover {
     width: 50vw;
   }
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
 footer {
-  font-family: "Merriweather", sans-serif;
+  font-family: "PT Serif", sans-serif;
   background-color: #FFE1A0;
   width: 100vw;
+  position: relative;
 }
 footer .social-media {
   display: flex;
@@ -83,45 +116,90 @@ footer .social-media a i {
     width: 65vw;
   }
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
 body {
   margin: 0;
   background: linear-gradient(#304F6D 40%, #899481 70%);
   min-height: 100vh;
 }
 body main {
-  margin-top: 90px;
-  margin-left: 16px;
-  margin-right: 16px;
-  font-family: "Merriweather", sans-serif;
+  margin-top: 75px;
+}
+body main h2 {
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+  padding: 2px;
+  color: #FFE1A0;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-style: normal;
+  font-size: 1.8rem;
+  margin: 24px;
+}
+body main p {
+  text-align: center;
+  color: white;
+  font-family: "PT Serif", sans-serif;
+  margin: 24px;
 }
 body main .greeting {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  height: 50vh;
 }
-body main .greeting img {
-  width: 75vw;
-  border-radius: 50%;
-  border: 2px solid #E07D54;
-  background-color: #E6E1DD;
-}
-body main .greeting h3, body main .greeting h1 {
+body main .greeting .hello-text h3, body main .greeting .hello-text h1 {
+  position: relative;
   text-align: center;
-  margin: 8px;
+  font-family: "Kalam", cursive;
+  margin: 0;
+  padding: 8px;
+  font-style: italic;
+  background-color: rgba(48, 79, 109, 0.8);
 }
-body main .greeting h3 {
-  font-size: 1.5em;
+body main .greeting .hello-text h3 {
+  font-size: 1.8rem;
+  color: white;
 }
-body main .greeting h1 {
-  font-size: 35px;
+body main .greeting .hello-text h1 {
+  font-size: 2.7rem;
+  color: white;
+  overflow: hidden;
+  border-right: 0.1em solid grey;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 2.5s steps(25, end), typing-bar 1s 6;
 }
-body main .greeting h1 span {
+body main .greeting .hello-text h1 span {
   color: #FFE1A0;
 }
-body main .welcome-info, body main .additional-info {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
+body main .greeting::before {
+  content: "";
+  background-image: url(./imgs/home-pic.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 75px;
+  opacity: 0.8;
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
 }
 body main .welcome-info img, body main .additional-info img {
   display: block;
@@ -129,18 +207,7 @@ body main .welcome-info img, body main .additional-info img {
   margin-right: auto;
   width: 50%;
 }
-body main .welcome-info h2, body main .welcome-info p, body main .additional-info h2, body main .additional-info p {
-  margin: 24px;
-}
-body main .welcome-info h2, body main .additional-info h2 {
-  border-top: 1px solid #E07D54;
-  border-bottom: 1px solid #E07D54;
-  background-color: #FFE1A0;
-  color: #304F6D;
-  padding: 2px;
-  text-align: center;
-}
-body main .welcome-info p, body main .additional-info p {
+body main .welcome-info p {
   text-align: justify;
 }
 body main .pic-blog-container {
@@ -151,19 +218,6 @@ body main .pic-blog-container {
   margin-top: 16px;
   margin-bottom: 16px;
   width: 100vw;
-}
-body main .pic-blog-container .blog-header {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
-}
-body main .pic-blog-container .blog-header h2 {
-  margin: 8px;
-  border-top: 1px solid #E07D54;
-  border-bottom: 1px solid #E07D54;
-  background-color: #FFE1A0;
-  color: #304F6D;
-  padding: 2px;
 }
 body main .pic-blog-container .pic-blog {
   display: flex;
@@ -180,15 +234,13 @@ body main .pic-blog-container .pic-blog a {
   text-decoration: none;
 }
 body main .pic-blog-container .pic-blog a .blog-quote {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+  padding: 2px;
+  color: #FFE1A0;
   max-height: 30vh;
   min-width: 30vw;
-}
-body main .pic-blog-container .pic-blog a .blog-quote p {
-  margin: 24px;
-  text-align: center;
 }
 body main .pic-blog-container .pic-blog a:hover .blog-quote {
   box-shadow: 0px -1px 11px 5px rgba(0, 0, 0, 0.75);
@@ -198,19 +250,13 @@ body main .pic-blog-container .pic-blog a:hover .blog-quote {
 body main .additional-info {
   margin-bottom: 16px;
 }
-body main .additional-info h2, body main .additional-info h4, body main .additional-info p {
+body main .additional-info h4 {
   text-align: center;
+  color: #FFE1A0;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 600px) {
-  body main .greeting {
-    flex-direction: row;
-    justify-content: space-around;
-    margin-bottom: 16px;
-  }
-  body main .greeting img {
-    width: 55vw;
-  }
   body main .greeting h3 {
     font-size: 2rem;
   }
@@ -223,9 +269,6 @@ body main .additional-info h2, body main .additional-info h4, body main .additio
   body main .greeting :nth-child(2) {
     order: 1;
   }
-  body main .welcome-info p {
-    font-size: 1.2rem;
-  }
   body main .welcome-info img {
     width: 30%;
   }
@@ -234,71 +277,74 @@ body main .additional-info h2, body main .additional-info h4, body main .additio
   }
 }
 @media screen and (min-width: 960px) {
-  body main .large-container {
-    display: flex;
-  }
-  body main .large-container .greeting {
+  body main .greeting {
     flex-direction: column;
-    justify-content: flex-start;
+    margin-left: 16px;
+    height: 63.5vh;
   }
-  body main .large-container .greeting img {
-    margin-top: 40px;
-    width: 35vw;
-    margin-right: 16px;
+  body main .greeting .hello-text h1 {
+    font-size: 4rem;
   }
-  body main .large-container .greeting .hello-text {
-    width: 25vw;
+  body main .greeting::before {
+    left: 0px;
+    top: 60px;
+    height: 65vh;
   }
-  body main .large-container .welcome-info {
-    margin: 16px;
-  }
-  body main .large-container2 {
+  body main .main-display {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+  }
+  body main .main-display .welcome-info {
+    margin: 16px;
+    position: relative;
+    width: 45%;
+  }
+  body main .main-display .blog {
+    margin: 16px;
+    width: 45%;
+  }
+  body main .main-display .blog .blog-header {
     width: 100%;
   }
-  body main .large-container2 .pic-blog-container {
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 50vw;
-  }
-  body main .large-container2 .pic-blog-container .pic-blog {
+  body main .main-display .blog .pic-blog-container {
     width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
     justify-content: space-around;
+    height: 100%;
   }
-  body main .large-container2 .pic-blog-container .pic-blog .blog-pic img {
-    width: 75%;
+  body main .main-display .blog .pic-blog-container .blog-pic {
+    width: 50%;
   }
-  body main .large-container2 .pic-blog-container .blog-header {
+  body main .main-display .blog .pic-blog-container .blog-pic img {
     width: 100%;
-    text-align: center;
   }
-  body main .large-container2 .additional-info {
-    max-width: 30vw;
+  body main .main-display .blog .pic-blog-container .blog-quote {
+    width: 50%;
+  }
+  body main .main-display .additional-info {
+    margin-top: 75px;
   }
 }
 @media screen and (min-width: 1200px) {
-  body main .large-container .greeting {
-    justify-content: space-around;
-    margin-top: 24px;
+  body main p {
+    font-size: 1.25rem;
   }
-  body main .large-container .greeting .hello-text h1 {
-    font-size: 4em;
+  body main h2 {
+    font-size: 2.5rem;
   }
-  body main .large-container2 .pic-blog-container {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
+  body main .greeting {
+    align-items: flex-start;
+    height: 75vh;
   }
-  body main .large-container2 .pic-blog-container .pic-blog {
-    width: 45%;
+  body main .greeting .hello-text h3 {
+    font-size: 2rem;
   }
-  body main .large-container2 .pic-blog-container .pic-blog .blog-pic img {
-    min-width: 100%;
+  body main .greeting .hello-text h1 {
+    font-size: 6rem;
   }
-  body main .large-container2 .pic-blog-container .pic-blog .blog-quote {
-    min-width: 10vw;
+  body main .greeting::before {
+    height: 75vh;
   }
 }/*# sourceMappingURL=index.css.map */

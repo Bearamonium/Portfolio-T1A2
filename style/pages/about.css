@@ -1,10 +1,27 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Kalam:wght@300&family=Lato:wght@300&family=Merriweather&family=Open+Sans&family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
 footer {
-  font-family: "Merriweather", sans-serif;
+  font-family: "PT Serif", sans-serif;
   background-color: #FFE1A0;
   width: 100vw;
+  position: relative;
 }
 footer .social-media {
   display: flex;
@@ -28,9 +45,25 @@ footer .social-media a i {
     width: 65vw;
   }
 }
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
 @keyframes button-hover {}
 header {
-  font-family: "Merriweather", sans-serif;
+  font-family: "PT Serif", sans-serif;
   background-color: #FFE1A0;
   padding-bottom: 0px;
   position: fixed;
@@ -83,261 +116,240 @@ header #nav-btns a:hover {
     width: 50vw;
   }
 }
-body {
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+html {
+  min-height: 100%;
+}
+html body {
+  min-height: 100%;
   margin: 0;
-  background: linear-gradient(#304F6D 40%, #899481 70%);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
-body main {
+html body main {
   margin-top: 90px;
-  margin-left: 16px;
-  margin-right: 16px;
+  height: 100%;
 }
-body main .personality-profile {
-  display: flex;
-  flex-direction: column;
-}
-body main .personality-profile .picture {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-body main .personality-profile .picture img {
-  border: 2px solid #E07D54;
-  background-color: #E6E1DD;
-  width: 40vw;
-  height: 85vw;
-  border-radius: 10px;
-}
-body main .personality-profile .personality-details {
+html body main .personality-profile {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
-body main .personality-profile .personality-details .infp {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
-  width: 100%;
-  margin-top: 16px;
-  margin-bottom: 8px;
-}
-body main .personality-profile .personality-details .infp h3 {
-  text-align: center;
-  margin: 8px;
-  font-family: "Merriweather", sans-serif;
-  border-top: 1px solid #E07D54;
-  border-bottom: 1px solid #E07D54;
-  background-color: #FFE1A0;
-  color: #304F6D;
-  padding: 2px;
-}
-body main .personality-profile .personality-details .profile-header {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
-  width: 100%;
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-body main .personality-profile .personality-details .profile-header h4 {
-  margin: 8px;
-  text-align: center;
-  font-family: "Merriweather", sans-serif;
-  border-top: 1px solid #E07D54;
-  border-bottom: 1px solid #E07D54;
-  background-color: #FFE1A0;
-  color: #304F6D;
-  padding: 2px;
-}
-body main .personality-profile .personality-details .personality-text {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
-}
-body main .personality-profile .personality-details .personality-text p {
-  text-align: justify;
-  margin: 24px;
-  font-family: "Merriweather", sans-serif;
-  font-weight: 550;
-}
-body main .other-info {
-  display: flex;
-  flex-wrap: wrap;
-}
-body main .other-info .hobbies {
+html body main .personality-profile .picture {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
-}
-body main .other-info .hobbies .hobby-img {
-  display: flex;
-  justify-content: space-around;
-}
-body main .other-info .hobbies .hobby-img img {
-  border: 2px solid #E07D54;
-  background-color: #E6E1DD;
-  width: 28vw;
-  margin-left: 16px;
-  margin-right: 16px;
-  border-radius: 50%;
-}
-body main .other-info .hobbies .hobby-text {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
-  margin-top: 16px;
-  margin-bottom: 16px;
-}
-body main .other-info .hobbies .hobby-text h3 {
+  font-family: "Kalam", cursive;
+  position: relative;
+  color: white;
+  font-style: italic;
   text-align: center;
-  border-top: 1px solid #E07D54;
-  border-bottom: 1px solid #E07D54;
-  background-color: #FFE1A0;
-  color: #304F6D;
-  padding: 2px;
-  font-family: "Merriweather", sans-serif;
+  background-color: rgba(48, 79, 109, 0.65);
 }
-body main .other-info .hobbies .hobby-text p {
-  text-align: justify;
-  margin: 24px;
-  font-family: "Merriweather", sans-serif;
+html body main .personality-profile .picture q, html body main .personality-profile .picture p {
+  margin: 8px;
 }
-body main .other-info .experience {
+html body main .personality-profile .personality-details {
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
-  margin-bottom: 16px;
+  align-items: center;
+  position: relative;
+  color: white;
+  margin: 10px;
+  background-color: rgba(48, 79, 109, 0.65);
 }
-body main .other-info .experience .experience-img {
-  display: flex;
-  justify-content: space-around;
-}
-body main .other-info .experience .experience-img img {
-  border: 2px solid #E07D54;
-  background-color: #E6E1DD;
-  width: 28vw;
-  margin-right: 16px;
-  margin-left: 16px;
-  border-radius: 50%;
-}
-body main .other-info .experience .experience-text {
-  border: 2px solid #E07D54;
-  border-radius: 10px;
-  background-color: rgba(225, 225, 225, 0.6);
-  margin-top: 16px;
-}
-body main .other-info .experience .experience-text h3 {
-  text-align: center;
-  border-top: 1px solid #E07D54;
-  border-bottom: 1px solid #E07D54;
-  background-color: #FFE1A0;
-  color: #304F6D;
+html body main .personality-profile .personality-details h3, html body main .personality-profile .personality-details h4 {
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
   padding: 2px;
-  font-family: "Merriweather", sans-serif;
+  color: #FFE1A0;
+  width: 90vw;
+  text-align: center;
+  font-family: "Kalam", cursive;
 }
-body main .other-info .experience .experience-text p {
-  text-align: justify;
+html body main .personality-profile .personality-details p {
   margin: 24px;
-  font-family: "Merriweather", sans-serif;
+  text-align: justify;
+  font-family: "PT Serif", sans-serif;
+}
+html body main .personality-profile .personality-details img {
+  display: none;
+}
+html body main .other-info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 16px;
+  text-align: center;
+}
+html body main .other-info .hobbies, html body main .other-info .experience {
+  background-color: rgba(48, 79, 109, 0.65);
+  display: flex;
+  color: white;
+}
+html body main .other-info .hobbies .hobby-img, html body main .other-info .hobbies .experience-img, html body main .other-info .experience .hobby-img, html body main .other-info .experience .experience-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  max-width: 35%;
+  margin: 8px;
+}
+html body main .other-info .hobbies .hobby-img img, html body main .other-info .hobbies .experience-img img, html body main .other-info .experience .hobby-img img, html body main .other-info .experience .experience-img img {
+  border-radius: 10%;
+}
+html body main .other-info .hobbies .hobby-text h3, html body main .other-info .hobbies .experience-text h3, html body main .other-info .experience .hobby-text h3, html body main .other-info .experience .experience-text h3 {
+  font-family: "Kalam", cursive;
+  margin: 16px;
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+  padding: 2px;
+  color: #FFE1A0;
+}
+html body main .other-info .hobbies .hobby-text p, html body main .other-info .hobbies .experience-text p, html body main .other-info .experience .hobby-text p, html body main .other-info .experience .experience-text p {
+  font-family: "PT Serif", sans-serif;
+  margin: 24px;
+  text-align: justify;
+}
+html body main .other-info .hobbies button, html body main .other-info .experience button {
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  background-color: #FFE1A0;
+}
+html body main .other-info .hobbies button:hover, html body main .other-info .experience button:hover {
+  box-shadow: 0px 2px 20px 14px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 20px 14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 20px 14px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+html body main::before {
+  content: "";
+  background-image: url(../../imgs/christopher-farrugia-2yQtqBqzDRo-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  position: fixed;
+  top: 60px;
+  opacity: 0.65;
+  width: 100%;
+  height: 100%;
+  background-position: center;
 }
 
 @media screen and (min-width: 600px) {
-  body main .personality-profile {
+  html body main .personality-profile .picture {
+    font-size: 1.3rem;
+  }
+  html body main .other-info .hobbies, html body main .other-info .experience {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  html body main .other-info .hobbies .hobby-img, html body main .other-info .hobbies .experience-img, html body main .other-info .experience .hobby-img, html body main .other-info .experience .experience-img {
     flex-direction: row;
   }
-  body main .personality-profile .picture {
-    flex-direction: column;
-  }
-  body main .personality-profile .picture img {
-    width: 30vw;
-    max-width: 288px;
-    margin-right: 16px;
-    margin-top: 16px;
-    height: auto;
-  }
-  body main .personality-profile .infp h3 {
-    font-size: 1.5em;
-  }
-  body main .personality-profile .profile-header h4 {
-    font-size: 1.3em;
-  }
-  body main .other-info .hobbies {
-    flex-direction: row;
-  }
-  body main .other-info .hobbies .hobby-img {
-    flex-direction: column;
-  }
-  body main .other-info .hobbies .hobby-img img {
-    width: 15vw;
-  }
-  body main .other-info .experience {
-    flex-direction: row;
-  }
-  body main .other-info .experience .experience-img {
-    flex-direction: column;
-  }
-  body main .other-info .experience .experience-img img {
-    width: 15vw;
+  html body main .other-info .hobbies .hobby-img img, html body main .other-info .hobbies .experience-img img, html body main .other-info .experience .hobby-img img, html body main .other-info .experience .experience-img img {
+    width: 50%;
   }
 }
 @media screen and (min-width: 960px) {
-  body main .other-info {
+  html body main .personality-profile .picture {
+    font-size: 1.75rem;
+  }
+  html body main .personality-profile .personality-details h3, html body main .personality-profile .personality-details h4 {
+    font-size: 2rem;
+    margin: 8px;
+  }
+  html body main .personality-profile .personality-details p {
+    font-size: 1.25rem;
+  }
+  html body main .other-info {
     flex-direction: row;
-    justify-content: space-around;
   }
-  body main .other-info .hobbies {
-    flex-direction: column;
-    align-items: center;
-    max-width: 45%;
+  html body main .other-info .hobbies p, html body main .other-info .experience p {
+    font-size: 1.25rem;
   }
-  body main .other-info .hobbies .hobby-img {
-    flex-direction: row;
-    max-width: 45%;
+  html body main .other-info .hobbies h3, html body main .other-info .experience h3 {
+    font-size: 2rem;
   }
-  body main .other-info .hobbies .hobby-text {
+  html body main .other-info .hobbies .hobby-img, html body main .other-info .hobbies .experience-img, html body main .other-info .experience .hobby-img, html body main .other-info .experience .experience-img {
+    height: 30%;
     width: 100%;
   }
-  body main .other-info .experience {
-    flex-direction: column;
-    max-width: 45%;
-    align-items: center;
-  }
-  body main .other-info .experience .experience-img {
-    flex-direction: row;
-    max-width: 45%;
-  }
-  body main .other-info .experience .experience-text {
-    max-width: 100%;
+  html body main .other-info .hobbies .hobby-img img, html body main .other-info .hobbies .experience-img img, html body main .other-info .experience .hobby-img img, html body main .other-info .experience .experience-img img {
+    width: 100%;
   }
 }
 @media screen and (min-width: 1200px) {
-  body main {
-    display: flex;
+  html body main .personality-profile .personality-details {
     flex-wrap: wrap;
   }
-  body main .personality-profile .picture {
-    min-width: 31vw;
-    position: absolute;
-    max-height: 1000px;
+  html body main .personality-profile .personality-details h3, html body main .personality-profile .personality-details h4 {
+    font-size: 2.5rem;
+    margin: 8px;
   }
-  body main .personality-profile .picture img {
-    min-width: 58%;
-    max-width: 370px;
+  html body main .personality-profile .personality-details p {
+    font-size: 1.25rem;
+  }
+  html body main .personality-profile .personality-details .personality-container {
+    display: flex;
+    justify-content: space-around;
+  }
+  html body main .personality-profile .personality-details .personality-container .personality-text {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    height: 100%;
+  }
+  html body main .personality-profile .personality-details .personality-container .personality-img {
+    display: flex;
+    width: 25%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+  }
+  html body main .personality-profile .personality-details .personality-container .personality-img img {
+    display: block;
+    border-radius: 10%;
+    width: 100%;
+    max-width: 378px;
     max-height: 900px;
+    margin: 16px;
   }
-  body main .personality-profile .personality-details {
-    max-width: 65vw;
-    position: relative;
-    left: 30vw;
+  html body main .other-info {
+    flex-direction: row;
   }
-  body main .other-info {
-    max-width: 65vw;
-    position: relative;
-    left: 30vw;
+  html body main .other-info .hobbies, html body main .other-info .experience {
+    width: 50%;
+  }
+  html body main .other-info .hobbies p, html body main .other-info .experience p {
+    font-size: 1.25rem;
+  }
+  html body main .other-info .hobbies h3, html body main .other-info .experience h3 {
+    font-size: 2.5rem;
+  }
+  html body main .other-info .hobbies .hobby-img, html body main .other-info .hobbies .experience-img, html body main .other-info .experience .hobby-img, html body main .other-info .experience .experience-img {
+    height: 30%;
+  }
+  html body main .other-info .hobbies .hobby-img img, html body main .other-info .hobbies .experience-img img, html body main .other-info .experience .hobby-img img, html body main .other-info .experience .experience-img img {
+    height: 100%;
+  }
+  html body main .other-info .hobbies .hobby-text, html body main .other-info .hobbies .experience-text, html body main .other-info .experience .hobby-text, html body main .other-info .experience .experience-text {
+    height: 70%;
   }
 }/*# sourceMappingURL=about.css.map */

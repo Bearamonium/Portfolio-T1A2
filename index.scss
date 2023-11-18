@@ -8,53 +8,92 @@ body {
     @include body-style;  
 
     main {
-        @include main-margin;
-        @include common-font; 
+        margin-top: 75px; 
+        
+        h2 {
+            @include title-backing;
+            text-align: center; 
+            @include header-font;
+            font-style: normal; 
+            font-size: 1.8rem; 
+            margin: 24px; 
+        }
 
+        p {
+            text-align: center;
+            color: white;
+            @include common-font;
+            margin: 24px;
+        }
+
+        // Commence CSS code for styling of Graphical Content
         .greeting {
             display: flex;
             flex-direction: column; 
             align-items: center;
-            img {
-                width: 75vw;  
-                border-radius: 50%;  
-                @include img-border;
-            }
-            h3, h1 {  
-                text-align: center;
-                margin: 8px; 
-            }
-            h3 {
-                font-size: 1.5em; 
-            }
-            h1 {
-                font-size: 35px;  
-                span {
-                    color: $primary-colour; 
+            justify-content: flex-end;
+            height: 50vh;
+            
+            .hello-text {
+                h3, h1 {
+                    position: relative;
+                    text-align: center;
+                    @include header-font;  
+                    margin: 0; 
+                    padding: 8px;  
+                    font-style: italic;
+                    background-color: rgba(48,79,109, 0.8);
+                }
+                h3 {
+                    font-size: 1.8rem; 
+                    color: white;
+                }
+                h1 {
+                    font-size: 2.7rem;
+                    color: white;
+                    overflow: hidden;
+                    border-right: .10em solid grey;
+                    white-space: nowrap;
+                    margin: 0 auto;
+                    animation:
+                        typing 2.5s steps(25, end),   
+                        typing-bar 1s 6;
+                    span {
+                        color: $primary-colour;
+                    }
                 }
             }
         }
+        .greeting::before {
+            content: "";
+            background-image: url(./imgs/home-pic.jpg);
+            background-size: cover;
+            position: absolute;
+            top: 75px; 
+            opacity: 0.80; 
+            width: 100vw;
+            height: 50vh; 
+            background-position: center;
+        }
+        // End CSS code
 
-        .welcome-info, .additional-info { 
-            @include card-style;  
+        // Commence CSS code for styling of Text Content
+        .welcome-info, .additional-info {  
             img {
                 display: block;
-                    margin-left: auto; 
-                    margin-right: auto;
-                    width: 50%;    
+                margin-left: auto; 
+                margin-right: auto;
+                width: 50%;     
             }
-            h2, p {
-                margin: 24px;   
-            }
-            h2 {
-                @include title-backing;
-                text-align: center; 
-            }
+        } 
+        .welcome-info {
             p {
                 text-align: justify; 
             }
-        } 
+        }
+        //End CSS code 
 
+        // Commence CSS code for styling of Text & Graphical Content
         .pic-blog-container {
             display: flex;
             align-items: center; 
@@ -63,13 +102,7 @@ body {
             margin-top: 16px; 
             margin-bottom: 16px; 
             width: 100vw; 
-            .blog-header {
-                @include card-style; 
-                h2 {
-                    margin: 8px; 
-                    @include title-backing;
-                }
-            }
+
             .pic-blog {
                 display: flex; 
                 align-items: center;
@@ -77,23 +110,19 @@ body {
                 .blog-pic {
                     img {
                         width: 35vw;   
-                        border-radius: 35%;    
+                        border-radius: 35%;
                         @include img-border; 
                     }
                 }
                 a {
                     text-decoration: none; 
-                    .blog-quote {
-                        @include card-style; 
-                        max-height: 30vh; 
-                        min-width: 30vw; 
-                        p {
-                                margin: 24px;   
-                                text-align: center; 
-                        }
+                    .blog-quote { 
+                        @include title-backing; 
+                        max-height: 30vh;  
+                        min-width: 30vw;  
                     }
                 }
-                a:hover {
+                a:hover { 
                     .blog-quote {
                         box-shadow: 0px -1px 11px 5px rgba(0,0,0,0.75);  
                         transform: scale(1.05);
@@ -102,30 +131,31 @@ body {
                 }
             }
         }
+        // End CSS code 
 
+        // Commence CSS code for styling of Text content
         .additional-info {
             margin-bottom: 16px; 
-            h2, h4, p {
+
+            h4 {
                 text-align: center;
+                color: $primary-colour;
+                font-size: 1.2rem;  
             }
-        }
+        } 
+        // End CSS code
     }
 }
 
+// Make Text and Graphical content responsive to larger screen size
 @media screen and (min-width: $medium) {
     body {
         main {
             .greeting {
-                flex-direction: row; 
-                justify-content: space-around;
-                margin-bottom: 16px; 
-                img {
-                    width: 55vw; 
-                }
                 h3 { 
                     font-size: 2rem; 
                 }
-                h1 {
+                h1 { 
                     font-size: 45px;  
                 } 
             } 
@@ -136,11 +166,8 @@ body {
                 order: 1; 
             }
             .welcome-info {
-                p {
-                    font-size: 1.2rem; 
-                }
                 img {
-                    width: 30%;
+                    width: 30%; 
                 }
             }
             .additional-info {
@@ -152,92 +179,89 @@ body {
     }
 }
 
+// Make Text and Graphical content responsive to larger screen size
 @media screen and (min-width: $large) {
     body {
         main {
-            .large-container {
-                display: flex;
-                .greeting {
-                    flex-direction: column; 
-                    justify-content: flex-start; 
-                    img {
-                        margin-top: 40px; 
-                        width: 35vw; 
-                        margin-right: 16px;
-                    }
-                    .hello-text {
-                        width: 25vw;
+            .greeting {
+                flex-direction: column; 
+                margin-left: 16px;
+                height: 63.5vh; 
+                .hello-text {
+                    h1 {
+                        font-size: 4rem; 
                     }
                 }
+            }
+            .greeting::before {
+                left: 0px; 
+                top: 60px;
+                height: 65vh;    
+            }
+            .main-display {
+                display: flex; 
+                flex-wrap: wrap;  
+                justify-content: space-around; 
                 .welcome-info {
                     margin: 16px; 
+                    position: relative;  
+                    width: 45%;  
                 }
-            }
-            .large-container2 {
-                display: flex;
-                flex-wrap: wrap; 
-                justify-content: space-around;
-                align-items: center;
-                width: 100%; 
-                .pic-blog-container {
-                    flex-wrap: wrap;
-                    justify-content: space-between;
-                    max-width: 50vw; 
-                    .pic-blog {
-                        width: 100%; 
-                        justify-content: space-around;  
-                        .blog-pic {
-                            img {
-                            width: 75%;    
-                            }  
-                        }
-                    }
+                .blog {
+                    margin: 16px; 
+                    width: 45%;  
                     .blog-header {
                         width: 100%; 
-                        text-align: center; 
-                    } 
+                    }
+                    .pic-blog-container {
+                        width: 100%; 
+                        overflow-x: hidden; 
+                        flex-direction: column;
+                        justify-content: space-around;  
+                        height: 100%; 
+                        .blog-pic {
+                            width: 50%;
+                            img {
+                                width: 100%; 
+                            }
+                        }
+                        .blog-quote {
+                            width: 50%; 
+                        }
+                    }
                 }
                 .additional-info {
-                    max-width: 30vw;   
+                    margin-top: 75px;    
                 }
             }
-            
-        }
-    }
+        } 
+    }            
 }
 
 @media screen and (min-width: $x-large) {
     body {
         main {
-            .large-container {
-                .greeting {
-                    justify-content: space-around; 
-                    margin-top: 24px; 
-                    .hello-text {
-                        h1 {
-                            font-size: 4em;  
-                        }
-                    }
-                }
+            p {
+                font-size: 1.25rem;     
             }
-            .large-container2 {
-                .pic-blog-container { 
-                    flex-wrap: wrap;
-                    flex-direction: row; 
-                    justify-content: space-around; 
-                    .pic-blog {
-                        width: 45%;    
-                        .blog-pic {
-                            img {
-                                min-width: 100%;   
-                            }
-                        }
-                        .blog-quote {
-                            min-width: 10vw;  
-                        }
-                    }
-                }
+            h2 {
+                font-size: 2.5rem;     
             }
-        } 
+            .greeting {
+                align-items: flex-start; 
+                height: 75vh; 
+                .hello-text {
+                    h3 {
+                        font-size: 2rem;   
+                    }
+                    h1 {
+                        font-size: 6rem; 
+                    }
+                } 
+            }
+            .greeting::before {
+                height: 75vh;  
+            }
+        }
     }
 }

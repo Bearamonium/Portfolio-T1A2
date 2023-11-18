@@ -4,179 +4,144 @@
 @import "../defaults/colours"; 
 @import "../defaults/common-style";
 
-body {
-    @include body-style;
-    display: flex;  
-    flex-direction: column;
-    justify-content: space-between; 
-
-    main {
-        @include main-margin;  
-        .personality-profile { 
-            display: flex;
-            flex-direction: column;
-            .picture {
-                display: flex; 
-                align-items: center; 
-                justify-content: space-around; 
-                img {
-                    @include img-border; 
-                    width: 40vw;    
-                    height: 85vw;               
-                    border-radius: 10px;      
-                }
-            }
-            .personality-details {
-                display: flex;
-                flex-direction: column;
-                align-items: center; 
-                justify-content: center;
-                .infp {
-                    @include card-style;  
-                    width: 100%; 
-                    margin-top: 16px;
-                    margin-bottom: 8px;
-                    h3 {
-                        text-align: center; 
-                        margin: 8px;  
-                        @include common-font; 
-                        @include title-backing; 
-                    }
-                }
-                .profile-header {
-                    @include card-style; 
-                    width: 100%;
-                    margin-top: 8px;
-                    margin-bottom: 8px; 
-                    h4 {
-                        margin: 8px; 
-                        text-align: center; 
-                        @include common-font;  
-                        @include title-backing; 
-                    }
-                } 
-                .personality-text {
-                    @include card-style; 
-                    p {
-                        text-align: justify;   
-                        margin: 24px; 
-                        @include common-font;
-                        font-weight: 550;
-                    }
-                }
-            }
-        }
-        .other-info {
-            display: flex; 
-            flex-wrap: wrap; 
-            .hobbies {
+html {
+    min-height: 100%;
+    body { 
+        min-height: 100%;
+        margin: 0; 
+        main {
+            margin-top: 90px; 
+            height: 100%;
+            // Commence CSS code for Text & Graphical Content
+            .personality-profile {
                 display: flex;
                 flex-direction: column; 
-                margin-top: 16px; 
-                .hobby-img {
+                align-items: center; 
+                .picture {  
                     display: flex;
-                    justify-content: space-around; 
-                    img {
-                        @include img-border; 
-                        width: 28vw;          
-                        margin-left: 16px; 
-                        margin-right: 16px;
-                        border-radius: 50%;
-                    } 
+                    flex-direction: column;
+                    @include header-font; 
+                    position: relative; 
+                    color: white; 
+                    font-style: italic;
+                    text-align: center;
+                    background-color: rgba(48,79,109, 0.65);  
+                    q, p {
+                        margin: 8px; 
+                    }
                 }
-                .hobby-text {
-                    @include card-style; 
-                    margin-top: 16px;  
-                    margin-bottom: 16px;
-                    h3 {
-                        text-align: center; 
-                        @include title-backing; 
-                        @include common-font; 
+                .personality-details {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center; 
+                    position: relative; 
+                    color: white; 
+                    margin: 10px;  
+                    background-color: rgba(48,79,109, 0.65);  
+                    h3, h4 {
+                        @include title-backing;
+                        width: 90vw; 
+                        text-align: center;
+                        @include header-font; 
                     }
                     p {
-                        text-align: justify;  
-                        margin: 24px;  
-                        @include common-font; 
-                    } 
-                }
-            }
-            .experience {
-                display: flex; 
-                flex-direction: column;
-                margin-top: 16px; 
-                margin-bottom: 16px;
-                .experience-img { 
-                    display: flex;
-                    justify-content: space-around; 
+                        margin: 24px; 
+                        text-align: justify;
+                        @include common-font;
+                    }
                     img {
-                        @include img-border;
-                        width: 28vw;
-                        margin-right: 16px;
-                        margin-left: 16px;   
-                        border-radius: 50%; 
-                    }  
-                }
-                .experience-text {
-                    @include card-style;  
-                    margin-top: 16px;  
-                    h3 {
-                        text-align: center; 
-                        @include title-backing; 
-                        @include common-font; 
-                    }  
-                    p {
-                        text-align: justify;  
-                        margin: 24px;  
-                        @include common-font; 
+                        display: none; 
                     } 
                 }
+            } 
+            //End CSS code
+            // Commence CSS code for Text & Graphical Content
+            .other-info {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                margin: 16px;
+                text-align: center; 
+                .hobbies, .experience { 
+                    background-color: rgba(48,79,109, 0.65);   
+                    display: flex; 
+                    color: white; 
+                    .hobby-img, .experience-img { 
+                        display: flex; 
+                        flex-direction: column;
+                        justify-content: space-around; 
+                        max-width: 35%;   
+                        margin: 8px;  
+                        img {
+                            border-radius: 10%;
+                        }
+                    }
+                    .hobby-text, .experience-text {
+                        h3 {
+                            @include header-font; 
+                            margin: 16px; 
+                            @include title-backing; 
+                        }
+                        p {
+                            @include common-font; 
+                            margin: 24px; 
+                            text-align: justify; 
+                        }
+                    }
+                    button {
+                        border-radius: 10px;
+                        border: none; 
+                        height: 50px; 
+                        font-size: 1rem;  
+                        margin-bottom: 16px;  
+                        background-color: $primary-colour;  
+                    }
+                    button:hover {
+                        box-shadow: 0px 2px 20px 14px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 0px 2px 20px 14px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 0px 2px 20px 14px rgba(0,0,0,0.75);
+                        cursor: pointer; 
+                    }
+                } 
             }
+            //End CSS code
         }
+        //Commence CSS code for Graphical content
+        main::before { 
+            content: "";
+            background-image: url(../../imgs/christopher-farrugia-2yQtqBqzDRo-unsplash.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+            position: fixed;  
+            top: 60px;  
+            opacity: 0.65;
+            width: 100%;
+            height: 100%; 
+            background-position: center;
+        } 
+        // End CSS code
     }
 }
 
 @media screen and (min-width: $medium) {
-    body {
-        main {
-            .personality-profile {
-                flex-direction: row;
-                .picture {
-                    flex-direction: column;
-                    img {
-                        width: 30vw;  
-                        max-width: 288px;
-                        margin-right: 16px; 
-                        margin-top: 16px;
-                        height: auto; 
+    html {
+        body {
+            main {
+                .personality-profile {
+                    .picture {
+                        font-size: 1.3rem;   
                     }
                 }
-                .infp {
-                    h3 {
-                        font-size: 1.5em;
-                    }
-                }
-                .profile-header {
-                    h4 {
-                        font-size: 1.3em;  
-                    }
-                }
-            }
-            .other-info {
-                .hobbies {
-                    flex-direction: row;
-                    .hobby-img {
-                        flex-direction: column; 
-                        img {
-                            width: 15vw;  
-                        }
-                    }
-                }
-                .experience {
-                    flex-direction: row; 
-                    .experience-img {
+                .other-info {
+                    .hobbies, .experience {
                         flex-direction: column;
-                        img {
-                            width: 15vw; 
+                        justify-content: space-around;
+                        align-items: center; 
+                        .hobby-img, .experience-img {
+                            flex-direction: row;
+                            img {
+                                width: 50%;  
+                            }
                         }
                     }
                 }
@@ -185,68 +150,110 @@ body {
     }
 }
 
-@media screen and (min-width: $large) { 
-    body { 
-        main {
-            .other-info {
-                flex-direction: row;
-                justify-content: space-around; 
-                .hobbies {
-                    flex-direction: column;
-                    align-items: center; 
-                    max-width: 45%; 
-                    .hobby-img {
-                        flex-direction: row; 
-                        max-width: 45%; 
+@media screen and (min-width: $large) {
+    html {
+        body {
+            main {
+                .personality-profile {
+                    .picture {
+                        font-size: 1.75rem;    
                     }
-                    .hobby-text {
-                        width: 100%;
+                    .personality-details {
+                        h3, h4 {
+                            font-size: 2rem; 
+                            margin: 8px; 
+                        }
+                        p {
+                            font-size: 1.25rem;  
+                        }
                     }
                 }
-                .experience {
-                    flex-direction: column;
-                    max-width: 45%;
-                    align-items: center;
-                    .experience-img {
-                        flex-direction: row; 
-                        max-width: 45%; 
+                .other-info {
+                    flex-direction: row; 
+                    .hobbies, .experience {
+                        p {
+                            font-size: 1.25rem; 
+                        }
+                        h3 {
+                            font-size: 2rem;   
+                        }
+                        .hobby-img, .experience-img {
+                            height: 30%;
+                            width: 100%;
+                            img {
+                                width: 100%;   
+                            }
+                        }
                     }
-                    .experience-text {
-                        max-width: 100%; 
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $x-large) {
+    html {
+        body {
+            main {
+                .personality-profile {
+                    .personality-details {
+                        flex-wrap: wrap;
+                        h3, h4 {
+                            font-size: 2.5rem;     
+                            margin: 8px;  
+                        }
+                        p {
+                            font-size: 1.25rem;   
+                        }
+                        .personality-container {
+                            display: flex; 
+                            justify-content: space-around;
+                            .personality-text {
+                                display: flex; 
+                                flex-direction: column;
+                                width: 65%;  
+                                height: 100%;  
+                            }
+                            .personality-img {
+                                display: flex;
+                                width: 25%; 
+                                position: relative; 
+                                justify-content: center; 
+                                align-items: center;
+                                img {
+                                    display: block; 
+                                    border-radius: 10%;   
+                                    width: 100%; 
+                                    max-width: 378px;
+                                    max-height: 900px; 
+                                    margin: 16px;
+                                } 
+                            }
+                        }
+                    }
+                }
+                .other-info {
+                    flex-direction: row; 
+                    .hobbies, .experience {
+                        width: 50%; 
+                        p {
+                            font-size: 1.25rem;   
+                        }
+                        h3 {
+                            font-size: 2.5rem;     
+                        }
+                        .hobby-img, .experience-img {
+                            height: 30%; 
+                            img {
+                                height: 100%;
+                            }
+                        }
+                        .hobby-text, .experience-text {
+                            height: 70%; 
+                        }
                     }
                 }
             }
         }
     }
 } 
-
-@media screen and (min-width:$x-large) {
-    body {
-        main {
-            display: flex; 
-            flex-wrap: wrap;  
-            .personality-profile { 
-                .picture { 
-                    min-width: 31vw;  
-                    position: absolute; 
-                    max-height: 1000px;
-                    img {
-                        min-width: 58%;  
-                        max-width: 370px;
-                        max-height: 900px; 
-                    }
-                }
-                .personality-details {
-                    max-width: 65vw; 
-                    position: relative;  
-                    left: 30vw;  
-                }
-            }
-            .other-info {
-                max-width: 65vw;
-                position: relative; 
-                left: 30vw;   
-            }
-        }
-    }
-}
