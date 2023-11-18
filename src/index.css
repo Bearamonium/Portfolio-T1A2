@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+@keyframes button-hover {}
+header {
+  font-family: "PT Serif", sans-serif;
+  background-color: #FFE1A0;
+  padding-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 1;
+}
+header .logo-name {
+  display: flex;
+}
+header .logo-name a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+header .logo-name a img {
+  background-color: transparent;
+  width: 57px;
+  height: 57px;
+}
+header .logo-name a p {
+  color: #304F6D;
+  font-weight: bolder;
+  font-size: 18px;
+}
+header #nav-btns {
+  display: flex;
+  justify-content: space-around;
+}
+header #nav-btns a {
+  text-align: center;
+  text-decoration: none;
+  color: #304F6D;
+  font-weight: 1000;
+}
+header #nav-btns a:hover {
+  text-decoration-line: underline;
+  color: white;
+  transition: font-size 0.5s;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #nav-btns {
+    width: 50vw;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+footer {
+  font-family: "PT Serif", sans-serif;
+  background-color: #FFE1A0;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+footer .copyright {
+  margin-left: 16px;
+  margin-top: 8px;
+}
+footer .copyright p, footer .copyright i {
+  font-weight: bold;
+}
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media a i {
+  width: 50px;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  footer .social-media {
+    width: 65vw;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+body {
+  margin: 0;
+  background: linear-gradient(#304F6D 40%, #899481 70%);
+  min-height: 100vh;
+}
+body main {
+  margin-top: 75px;
+}
+body main h2 {
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+  padding: 2px;
+  color: #FFE1A0;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  font-style: normal;
+  font-size: 1.8rem;
+  margin: 24px;
+}
+body main p {
+  text-align: center;
+  color: white;
+  font-family: "PT Serif", sans-serif;
+  margin: 24px;
+}
+body main .greeting {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 50vh;
+}
+body main .greeting .hello-text h3, body main .greeting .hello-text h1 {
+  position: relative;
+  text-align: center;
+  font-family: "Kalam", cursive;
+  margin: 0;
+  padding: 8px;
+  font-style: italic;
+  background-color: rgba(48, 79, 109, 0.8);
+}
+body main .greeting .hello-text h3 {
+  font-size: 1.8rem;
+  color: white;
+}
+body main .greeting .hello-text h1 {
+  font-size: 2.7rem;
+  color: white;
+  overflow: hidden;
+  border-right: 0.1em solid grey;
+  white-space: nowrap;
+  margin: 0 auto;
+  animation: typing 2.5s steps(25, end), typing-bar 1s 6;
+}
+body main .greeting .hello-text h1 span {
+  color: #FFE1A0;
+}
+body main .greeting::before {
+  content: "";
+  background-image: url(./imgs/home-pic.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 75px;
+  opacity: 0.8;
+  width: 100vw;
+  height: 50vh;
+  background-position: center;
+}
+body main .welcome-info img, body main .additional-info img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+body main .welcome-info p {
+  text-align: justify;
+}
+body main .pic-blog-container {
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  gap: 8px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  width: 100vw;
+}
+body main .pic-blog-container .pic-blog {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+body main .pic-blog-container .pic-blog .blog-pic img {
+  width: 35vw;
+  border-radius: 35%;
+  border: 2px solid #E07D54;
+  background-color: #E6E1DD;
+}
+body main .pic-blog-container .pic-blog a {
+  text-decoration: none;
+}
+body main .pic-blog-container .pic-blog a .blog-quote {
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+  padding: 2px;
+  color: #FFE1A0;
+  max-height: 30vh;
+  min-width: 30vw;
+}
+body main .pic-blog-container .pic-blog a:hover .blog-quote {
+  box-shadow: 0px -1px 11px 5px rgba(0, 0, 0, 0.75);
+  transform: scale(1.05);
+  transition: transform 1s;
+}
+body main .additional-info {
+  margin-bottom: 16px;
+}
+body main .additional-info h4 {
+  text-align: center;
+  color: #FFE1A0;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
+  body main .greeting h3 {
+    font-size: 2rem;
+  }
+  body main .greeting h1 {
+    font-size: 45px;
+  }
+  body main .greeting :nth-child(1) {
+    order: 2;
+  }
+  body main .greeting :nth-child(2) {
+    order: 1;
+  }
+  body main .welcome-info img {
+    width: 30%;
+  }
+  body main .additional-info h4, body main .additional-info p {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 960px) {
+  body main .greeting {
+    flex-direction: column;
+    margin-left: 16px;
+    height: 63.5vh;
+  }
+  body main .greeting .hello-text h1 {
+    font-size: 4rem;
+  }
+  body main .greeting::before {
+    left: 0px;
+    top: 60px;
+    height: 65vh;
+  }
+  body main .main-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  body main .main-display .welcome-info {
+    margin: 16px;
+    position: relative;
+    width: 45%;
+  }
+  body main .main-display .blog {
+    margin: 16px;
+    width: 45%;
+  }
+  body main .main-display .blog .blog-header {
+    width: 100%;
+  }
+  body main .main-display .blog .pic-blog-container {
+    width: 100%;
+    overflow-x: hidden;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
+  body main .main-display .blog .pic-blog-container .blog-pic {
+    width: 50%;
+  }
+  body main .main-display .blog .pic-blog-container .blog-pic img {
+    width: 100%;
+  }
+  body main .main-display .blog .pic-blog-container .blog-quote {
+    width: 50%;
+  }
+  body main .main-display .additional-info {
+    margin-top: 75px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body main p {
+    font-size: 1.25rem;
+  }
+  body main h2 {
+    font-size: 2.5rem;
+  }
+  body main .greeting {
+    align-items: flex-start;
+    height: 75vh;
+  }
+  body main .greeting .hello-text h3 {
+    font-size: 2rem;
+  }
+  body main .greeting .hello-text h1 {
+    font-size: 6rem;
+  }
+  body main .greeting::before {
+    height: 75vh;
+  }
+}/*# sourceMappingURL=index.css.map */

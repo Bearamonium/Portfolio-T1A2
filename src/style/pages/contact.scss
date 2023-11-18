@@ -1,0 +1,117 @@
+@import "../components/footer";
+@import "../components/header";
+@import "../defaults/breakpoints";
+@import "../defaults/colours"; 
+@import "../defaults/common-style";
+
+html {
+    height: 100%; 
+    body {
+        margin: 0;  
+        background: linear-gradient($primary-background 40%, $secondary-background 70%);  
+        height: 100%; 
+        width: 100%; 
+        position: absolute;
+            main {
+                margin-left: 16px;
+                margin-right: 16px; 
+                @include common-font; 
+                margin-top: 90px;
+                position: relative;
+                h3 {
+                    margin: 0; 
+                    text-align: center;
+                    font-size: 1.5rem;  
+                    @include title-backing;
+                    @include header-font;
+                }
+                form {
+                    .form-elements {
+                        display: flex;
+                        flex-direction: column;
+                        margin-bottom: 16px; 
+
+                        .form-input {
+                            border: 2px solid $primary-colour;
+                            border-radius: 10px;
+                            outline: none;
+                            padding-left: 10px; 
+                            font-size: 1.1rem; 
+
+                            &#form-textarea {
+                                resize: none; 
+                            }
+
+                            &:not(#form-textarea) {
+                                height: 26px; 
+                            }
+                        }
+                    }
+                    
+                    .btn-div {
+                        text-align: center; 
+                        #submit {
+                            height: 40px; 
+                            background-color: $primary-colour;
+                            border: 2px solid $third-colour; 
+                            color: $primary-background;
+                            font-weight: bolder;
+                            min-width: 80px; 
+                            font-size: 1.1rem; 
+                            border-radius: 10px;   
+                        }
+                    }
+                }
+                
+                // Commence CSS code for styling of Text Content
+                .contact-details {
+                    text-align: center;
+                    @include card-style; 
+                    margin-bottom: 16px; 
+                    margin-top: 16px;  
+
+                    span {
+                        font-weight: bolder; 
+                    }
+                }
+                // End CSS code
+            }
+            footer {
+                position: absolute;
+                bottom: 0; 
+            }
+    }
+
+    @media screen and (min-width: $large) {
+        body {
+            main {
+                h3 {
+                    font-size: 2rem; 
+                }
+                .contact-container {
+                    display: flex;
+                    margin-bottom: 16px;
+                    justify-content: space-around;
+                    align-items: center;
+                    .form-elements {
+                        width: 50vw; 
+                        margin-right: 16px;  
+                    }
+                }
+                .contact-details {
+                    width: 35vw;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: $x-large) {
+        body {
+            main {
+                h3 {
+                    font-size: 2.5rem; 
+                }
+            }
+        }
+    } 
+} 

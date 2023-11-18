@@ -1,0 +1,221 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam:wght@700&family=PT+Serif&family=Playfair+Display:ital,wght@1,800&display=swap");
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+footer {
+  font-family: "PT Serif", sans-serif;
+  background-color: #FFE1A0;
+  width: 100vw;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+footer .copyright {
+  margin-left: 16px;
+  margin-top: 8px;
+}
+footer .copyright p, footer .copyright i {
+  font-weight: bold;
+}
+footer .social-media {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .social-media a {
+  text-decoration: none;
+}
+footer .social-media a i {
+  width: 50px;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  footer .social-media {
+    width: 65vw;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+@keyframes button-hover {}
+header {
+  font-family: "PT Serif", sans-serif;
+  background-color: #FFE1A0;
+  padding-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  width: 100vw;
+  z-index: 1;
+}
+header .logo-name {
+  display: flex;
+}
+header .logo-name a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+}
+header .logo-name a img {
+  background-color: transparent;
+  width: 57px;
+  height: 57px;
+}
+header .logo-name a p {
+  color: #304F6D;
+  font-weight: bolder;
+  font-size: 18px;
+}
+header #nav-btns {
+  display: flex;
+  justify-content: space-around;
+}
+header #nav-btns a {
+  text-align: center;
+  text-decoration: none;
+  color: #304F6D;
+  font-weight: 1000;
+}
+header #nav-btns a:hover {
+  text-decoration-line: underline;
+  color: white;
+  transition: font-size 0.5s;
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 960px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header #nav-btns {
+    width: 50vw;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes typing-bar {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: gray;
+  }
+}
+body {
+  margin: 0;
+  background: linear-gradient(#304F6D 40%, #899481 70%);
+  min-height: 100vh;
+}
+body main {
+  margin-top: 90px;
+  margin-left: 16px;
+  margin-right: 16px;
+  font-family: "PT Serif", sans-serif;
+}
+body main p {
+  color: white;
+}
+body main h4 {
+  color: #FFE1A0;
+}
+body main img {
+  border: 2px solid #E07D54;
+  background-color: #E6E1DD;
+}
+body main .work-experience, body main .academic-achievements, body main .resume-link {
+  text-align: center;
+  margin-bottom: 16px;
+}
+body main .work-experience h2, body main .academic-achievements h2, body main .resume-link h2 {
+  border-top: 5px solid;
+  -o-border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+     border-image: linear-gradient(to right, transparent 5%, #E07D54 50%, transparent 95%) 100% 1;
+  padding: 2px;
+  color: #FFE1A0;
+}
+body main .work-experience h4, body main .academic-achievements h4, body main .resume-link h4 {
+  font-size: 1.2rem;
+}
+body main .work-experience p, body main .academic-achievements p, body main .resume-link p {
+  font-size: 1.1rem;
+}
+body main .resume-link button {
+  border-radius: 10px;
+  border: none;
+  height: 50px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+  background-color: #FFE1A0;
+}
+body main .resume-link button:hover {
+  box-shadow: 0px 2px 20px 14px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 20px 14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 20px 14px rgba(0, 0, 0, 0.75);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 960px) {
+  body main .resume-info {
+    display: flex;
+    justify-content: space-around;
+  }
+  body main .resume-info .work-experience, body main .resume-info .academic-achievements {
+    min-width: 28%;
+  }
+  body main img {
+    border-radius: 50%;
+    margin-bottom: 16px;
+    width: 25%;
+    height: 200px;
+  }
+  body main .resume-link button {
+    margin-bottom: 16px;
+  }
+}
+@media screen and (max-width: 959px) {
+  body main img {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  body main img {
+    width: 30%;
+    height: 50%;
+  }
+}/*# sourceMappingURL=resume.css.map */

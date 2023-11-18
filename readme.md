@@ -2,9 +2,9 @@
 
 #### Philip Mills
 
-Github Repository
+[Github Repository](https://github.com/Bearamonium/Portfolio-T1A2)
 
-Presentation
+[Presentation](https://youtu.be/aJAhkKjDPiY)
 
 Website
 

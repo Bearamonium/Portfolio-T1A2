@@ -1,0 +1,267 @@
+@import "./style/defaults/breakpoints";
+@import "./style/defaults/colours"; 
+@import "./style/components/header";
+@import "./style/components/footer";
+@import "./style/defaults/common-style"; 
+
+body {
+    @include body-style;  
+
+    main {
+        margin-top: 75px; 
+        
+        h2 {
+            @include title-backing;
+            text-align: center; 
+            @include header-font;
+            font-style: normal; 
+            font-size: 1.8rem; 
+            margin: 24px; 
+        }
+
+        p {
+            text-align: center;
+            color: white;
+            @include common-font;
+            margin: 24px;
+        }
+
+        // Commence CSS code for styling of Graphical Content
+        .greeting {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;
+            justify-content: flex-end;
+            height: 50vh;
+            
+            .hello-text {
+                h3, h1 {
+                    position: relative;
+                    text-align: center;
+                    @include header-font;  
+                    margin: 0; 
+                    padding: 8px;  
+                    font-style: italic;
+                    background-color: rgba(48,79,109, 0.8);
+                }
+                h3 {
+                    font-size: 1.8rem; 
+                    color: white;
+                }
+                h1 {
+                    font-size: 2.7rem;
+                    color: white;
+                    overflow: hidden;
+                    border-right: .10em solid grey;
+                    white-space: nowrap;
+                    margin: 0 auto;
+                    animation:
+                        typing 2.5s steps(25, end),   
+                        typing-bar 1s 6;
+                    span {
+                        color: $primary-colour;
+                    }
+                }
+            }
+        }
+        .greeting::before {
+            content: "";
+            background-image: url(./imgs/home-pic.jpg);
+            background-size: cover;
+            position: absolute;
+            top: 75px; 
+            opacity: 0.80; 
+            width: 100vw;
+            height: 50vh; 
+            background-position: center;
+        }
+        // End CSS code
+
+        // Commence CSS code for styling of Text Content
+        .welcome-info, .additional-info {  
+            img {
+                display: block;
+                margin-left: auto; 
+                margin-right: auto;
+                width: 50%;     
+            }
+        } 
+        .welcome-info {
+            p {
+                text-align: justify; 
+            }
+        }
+        //End CSS code 
+
+        // Commence CSS code for styling of Text & Graphical Content
+        .pic-blog-container {
+            display: flex;
+            align-items: center; 
+            overflow-x: scroll;
+            gap: 8px; 
+            margin-top: 16px; 
+            margin-bottom: 16px; 
+            width: 100vw; 
+
+            .pic-blog {
+                display: flex; 
+                align-items: center;
+                gap: 8px;
+                .blog-pic {
+                    img {
+                        width: 35vw;   
+                        border-radius: 35%;
+                        @include img-border; 
+                    }
+                }
+                a {
+                    text-decoration: none; 
+                    .blog-quote { 
+                        @include title-backing; 
+                        max-height: 30vh;  
+                        min-width: 30vw;  
+                    }
+                }
+                a:hover { 
+                    .blog-quote {
+                        box-shadow: 0px -1px 11px 5px rgba(0,0,0,0.75);  
+                        transform: scale(1.05);
+                        transition: transform 1s;  
+                    }  
+                }
+            }
+        }
+        // End CSS code 
+
+        // Commence CSS code for styling of Text content
+        .additional-info {
+            margin-bottom: 16px; 
+
+            h4 {
+                text-align: center;
+                color: $primary-colour;
+                font-size: 1.2rem;  
+            }
+        } 
+        // End CSS code
+    }
+}
+
+// Make Text and Graphical content responsive to larger screen size
+@media screen and (min-width: $medium) {
+    body {
+        main {
+            .greeting {
+                h3 { 
+                    font-size: 2rem; 
+                }
+                h1 { 
+                    font-size: 45px;  
+                } 
+            } 
+            .greeting :nth-child(1) {
+                order: 2;
+            }
+            .greeting :nth-child(2) {
+                order: 1; 
+            }
+            .welcome-info {
+                img {
+                    width: 30%; 
+                }
+            }
+            .additional-info {
+                h4, p { 
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}
+
+// Make Text and Graphical content responsive to larger screen size
+@media screen and (min-width: $large) {
+    body {
+        main {
+            .greeting {
+                flex-direction: column; 
+                margin-left: 16px;
+                height: 63.5vh; 
+                .hello-text {
+                    h1 {
+                        font-size: 4rem; 
+                    }
+                }
+            }
+            .greeting::before {
+                left: 0px; 
+                top: 60px;
+                height: 65vh;    
+            }
+            .main-display {
+                display: flex; 
+                flex-wrap: wrap;  
+                justify-content: space-around; 
+                .welcome-info {
+                    margin: 16px; 
+                    position: relative;  
+                    width: 45%;  
+                }
+                .blog {
+                    margin: 16px; 
+                    width: 45%;  
+                    .blog-header {
+                        width: 100%; 
+                    }
+                    .pic-blog-container {
+                        width: 100%; 
+                        overflow-x: hidden; 
+                        flex-direction: column;
+                        justify-content: space-around;  
+                        height: 100%; 
+                        .blog-pic {
+                            width: 50%;
+                            img {
+                                width: 100%; 
+                            }
+                        }
+                        .blog-quote {
+                            width: 50%; 
+                        }
+                    }
+                }
+                .additional-info {
+                    margin-top: 75px;    
+                }
+            }
+        } 
+    }            
+}
+
+@media screen and (min-width: $x-large) {
+    body {
+        main {
+            p {
+                font-size: 1.25rem;     
+            }
+            h2 {
+                font-size: 2.5rem;     
+            }
+            .greeting {
+                align-items: flex-start; 
+                height: 75vh; 
+                .hello-text {
+                    h3 {
+                        font-size: 2rem;   
+                    }
+                    h1 {
+                        font-size: 6rem; 
+                    }
+                } 
+            }
+            .greeting::before {
+                height: 75vh;  
+            }
+        }
+    }
+}
