@@ -92,7 +92,16 @@ footer {
   font-family: "PT Serif", sans-serif;
   background-color: #FFE1A0;
   width: 100vw;
+  display: flex;
   position: relative;
+  justify-content: space-between;
+}
+footer .copyright {
+  margin-left: 16px;
+  margin-top: 8px;
+}
+footer .copyright p, footer .copyright i {
+  font-weight: bold;
 }
 footer .social-media {
   display: flex;
@@ -108,10 +117,6 @@ footer .social-media a i {
 }
 
 @media screen and (min-width: 600px) {
-  footer {
-    display: flex;
-    justify-content: flex-end;
-  }
   footer .social-media {
     width: 65vw;
   }
